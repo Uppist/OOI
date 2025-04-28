@@ -2,8 +2,8 @@
 
 import React from "react";
 import styles from "./style.module.css";
-import logo1 from "../../assets/UtilityIcon.svg";
-import logo2 from "../../assets/UtilityIcon2.svg";
+import logo1 from "../../assets/Utilityicon.svg";
+import logo2 from "../../assets/Utilityicon2.svg";
 export default function Buttons() {
   return (
     <div className={styles.buttons}>
