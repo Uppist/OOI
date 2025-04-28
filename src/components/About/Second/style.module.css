@@ -1,0 +1,109 @@
+/** @format */
+/*Who we are container for the second section*/
+.container {
+  padding: 120px 50px 60px 50px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.textwe {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.textwe label {
+  font-size: 24px;
+  color: var(--color-text);
+  font-weight: 600;
+  font-family: var(--font-inter);
+}
+
+.textwe h2 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 700;
+  /* width: 65%; */
+  font-family: var(--font-inter);
+  color: var(--color-orange);
+}
+
+.textwe p {
+  margin: 0;
+  width: 85%;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: justify;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+}
+
+/*Philosophies container*/
+.philosophies {
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.textphil {
+  display: flex;
+  /* align-items: center; */
+  gap: 23px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.text h2 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 500;
+  color: var(--color-orange);
+  font-family: var(--font-inter);
+}
+
+.text h2 > span {
+  font-weight: 700;
+}
+
+.missionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.mission {
+  display: flex;
+  flex-direction: column;
+}
+
+.mission span {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-orange);
+  font-family: var(--font-inter);
+}
+
+.mission p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+}
+
+.philosophies > p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+}
+.p {
+  margin-top: -35px !important;
+}

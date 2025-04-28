@@ -1,0 +1,31 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+:root {
+  /* Colours */
+  --color-text: hsla(0, 0%, 17%, 1);
+  --color-primary: hsla(0, 0%, 100%, 1);
+  --color-primary2: hsla(0, 0%, 93%, 1);
+  --color-text-book: hsla(180, 0%, 46%, 1);
+  --color-secondary: #19376d;
+  --color-dark: #0b2447;
+  --color-orange: hsla(12, 100%, 60%, 1);
+  --color-background: hsla(0, 0%, 12%, 1);
+  /* Fonts */
+  --font-inter: "Inter";
+  --font-montserrat: "Montserrat";
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,49 @@
+/** @format */
+
+.firstSection {
+  margin-top: 105px;
+}
+img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* 0.7 means 70% black */
+}
+
+.textContainer {
+  position: absolute;
+  margin-top: -500px;
+  text-align: center;
+  display: grid;
+  gap: 37px;
+  place-items: center;
+}
+
+.text {
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.text h2 {
+  margin: 0;
+  font-size: 72px;
+  font-weight: 900;
+  color: var(--color-primary);
+  font-family: var(--font-inter);
+}
+
+.text p {
+  margin: 0;
+  font-family: var(--font-montserrat);
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--color-primary2);
+  width: 70%;
+}
