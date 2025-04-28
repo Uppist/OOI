@@ -1,0 +1,111 @@
+/**
+ * Styling for assessment
+ *
+ * @format
+ */
+
+.assessment {
+  padding: 60px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+  align-items: center;
+}
+
+.assessment h2 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-orange);
+  font-family: var(--font-inter);
+}
+
+.image {
+  display: flex;
+  gap: 58px;
+}
+
+.content p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+  text-align: justify;
+}
+
+.content ul {
+  /* padding: 0; */
+  /* margin: 0; */
+
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content li {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+  list-style: none;
+  text-align: justify;
+}
+
+.content li span {
+  font-weight: 600;
+}
+
+/*Styling for sustainablitiy*/
+
+.sustainability {
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 58px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.text h2 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-orange);
+  font-family: var(--font-inter);
+}
+
+.p {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.p p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+  text-align: justify;
+}
+
+.sustainability p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+  text-align: justify;
+}

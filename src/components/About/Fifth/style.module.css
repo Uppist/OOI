@@ -1,0 +1,58 @@
+/** @format */
+
+.fifth {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0 60px 120px;
+  align-items: center;
+  background-color: hsla(11, 100%, 97%, 1);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.container h2 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 500;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+}
+
+.container h2 span {
+  color: var(--color-orange);
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 77px;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.button span {
+  font-size: 24px;
+  font-family: var(--font-inter);
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+.button button {
+  width: fit-content;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--color-orange);
+  color: var(--color-primary);
+  font-family: var(--font-inter);
+}

@@ -108,28 +108,38 @@ export default function Footer() {
           <Link to='/'>
             <Footerlogo />
           </Link>
-          <h2>Empowering Urban Youth with Creativity & Opportunity.</h2>
+          <h2>Inspiring Change, Driving Impact</h2>
         </div>
         <div className={styles.quicks}>
           <label>Quick Links</label>
 
           <ul>
             <Link to='/'>
-              <li>Home</li>
+              <li>Programmes</li>
             </Link>
-
             <Link to='/aboutus'>
               {" "}
-              <li>About us</li>
+              <li>Givengo</li>
             </Link>
-
             <Link to='/service'>
-              <li>Services</li>
+              <li>Gallery</li>
             </Link>
-
+            <Link to='/contactus'>
+              <li>Volunteer</li>
+            </Link>
+            <Link to='/contactus'>
+              <li>Refer a Nonprofit</li>
+            </Link>{" "}
             <Link to='/contactus'>
               <li>Contact Us</li>
             </Link>
+          </ul>
+        </div>
+        <div className={styles.quicks}>
+          <label htmlFor=''>Policies</label>
+          <ul>
+            <li>Privacy Policy</li>
+            <li>Terms of Use</li>
           </ul>
         </div>
         <div className={styles.connect}>
@@ -141,7 +151,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <label>© Ireti Hub Africa 2025. All rights reserved</label>
+      <label>© October Orange Initiative 2025. All Rights Reserved.</label>
 
       <span>
         <Designed />
