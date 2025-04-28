@@ -1,0 +1,184 @@
+/**
+ * Styling for firstsection
+ *
+ * @format
+ */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.programme {
+  /* margin-top: 50px; */
+  padding: 120px 120px 0px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.programme h2 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-orange);
+  font-family: var(--font-inter);
+}
+
+.p {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.p p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+  text-align: justify;
+}
+
+.p p span {
+  font-weight: 700;
+  color: var(--color-orange);
+}
+
+/*Styling for the gridContainer*/
+
+.gridContainer {
+  padding: 0 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  gap: 50px;
+  /* margin-top: 50px; */
+}
+
+.gridItem {
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  width: 306px;
+  height: 508px;
+  box-shadow: 0px 4px 20px hsla(220, 17%, 17%, 0.08);
+}
+
+.gridItem img {
+  padding: 75px 17px;
+}
+
+hr {
+  width: -webkit-fill-available;
+  border: 1px solid hsla(0, 11%, 91%, 1);
+}
+
+.text {
+  padding: 70px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.text span {
+  font-size: 20px;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+  font-weight: 500;
+}
+
+.button1 {
+  border: 1px solid hsla(219, 79%, 66%, 1);
+  color: hsla(219, 79%, 66%, 1);
+  padding: 8px 16px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+.button2 {
+  border: 1px solid var(--color-orange);
+  color: var(--color-orange);
+  padding: 8px 16px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+.button3 {
+  border: 1px solid hsla(218, 48%, 30%, 1);
+  color: hsla(218, 48%, 30%, 1);
+  padding: 8px 16px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+.button4 {
+  border: 1px solid hsla(90, 37%, 50%, 1);
+  color: hsla(90, 37%, 50%, 1);
+  padding: 8px 16px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+.button5 {
+  border: 1px solid hsla(263, 100%, 66%, 1);
+  color: hsla(263, 100%, 66%, 1);
+  padding: 8px 16px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+.button6 {
+  border: 1px solid hsla(345, 81%, 75%, 1);
+  color: hsla(345, 81%, 75%, 1);
+  padding: 8px 16px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+.button7 {
+  border: 1px solid hsla(12, 100%, 60%, 1);
+  color: hsla(12, 100%, 60%, 1);
+  padding: 8px 16px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+
+/*Styling for buttons*/
+.buttons {
+  display: flex;
+  gap: 46px;
+  justify-content: center;
+}
+
+.buttons button {
+  padding: 8px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-inter);
+  background-color: white;
+  border: 1.2px solid var(--color-orange);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--color-orange);
+}

@@ -77,7 +77,7 @@ export default function Footer() {
 
           <div className={styles.location}>
             <h2>Contact</h2>
-            <span>Email: Iretihubafrica@gmail.com</span>
+            <span>Email: info@octoberorange.org</span>
           </div>
         </div>
         <div>
