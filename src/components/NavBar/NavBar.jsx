@@ -31,9 +31,9 @@ export default function NavBar({}) {
             <li className={styles.lists}>Programmes</li>
           </Link>
 
-          {/* <Link to='/services'> */}
-          <li className={styles.lists}>Givengo </li>
-          {/* </Link> */}
+          <Link to='/givengo'>
+            <li className={styles.lists}>Givengo </li>
+          </Link>
 
           {/* <Link to='/Articles'> */}
           <li className={styles.lists}>
