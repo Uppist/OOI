@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import styles from "./NavBar.module.css";
 import LogoNav from "./LogoNav";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function NavBar({}) {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
@@ -24,12 +24,12 @@ export default function NavBar({}) {
         {/* </Link> */}
 
         <ul className={styles.navul}>
-          {/* <Link to='/'> */}
-          <li className={styles.lists}>About Us</li>
-          {/* </Link> */}
-          {/* <Link to='/aboutus'> */}
-          <li className={styles.lists}>Programmes</li>
-          {/* </Link> */}
+          <Link to='/OOI' OOI>
+            <li className={styles.lists}>About Us</li>
+          </Link>
+          <Link to='/programme'>
+            <li className={styles.lists}>Programmes</li>
+          </Link>
 
           {/* <Link to='/services'> */}
           <li className={styles.lists}>Givengo </li>
