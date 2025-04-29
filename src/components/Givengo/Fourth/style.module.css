@@ -1,0 +1,45 @@
+/** @format */
+
+.funds {
+  display: flex;
+  align-items: center;
+  padding: 60px 0 60px 80px;
+  gap: 40px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.text h2 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-orange);
+  font-family: var(--font-inter);
+}
+
+.text p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+}
+
+.text ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+  list-style: none;
+}
+
+.text ul span {
+  font-weight: 500;
+}

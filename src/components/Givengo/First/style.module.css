@@ -1,0 +1,84 @@
+/** @format */
+
+.overview {
+  padding: 120px 80px;
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content {
+  display: flex;
+  /* align-items: center; */
+  gap: 25px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.text label {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.textContent h2 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-orange);
+  font-family: var(--font-inter);
+}
+
+.textContent p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+  text-align: justify;
+}
+
+.p {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.p p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+  text-align: justify;
+}
+
+.p span {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+}
+
+.p ul {
+  list-style: none;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

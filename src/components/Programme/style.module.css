@@ -162,6 +162,72 @@ hr {
   cursor: pointer;
 }
 
+.give1 {
+  border: none;
+  color: var(--color-primary);
+  padding: 8px 40px;
+  background-color: hsla(219, 79%, 66%, 1);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+
+.give2 {
+  border: none;
+  color: var(--color-primary);
+  padding: 8px 40px;
+  background-color: hsla(12, 100%, 60%, 1);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+
+.give3 {
+  border: none;
+  color: var(--color-primary);
+  padding: 8px 40px;
+  background-color: hsla(218, 48%, 30%, 1);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+
+.give4 {
+  border: none;
+  color: var(--color-primary);
+  padding: 8px 40px;
+  background-color: hsla(90, 37%, 50%, 1);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+
+.give5 {
+  border: none;
+  color: var(--color-primary);
+  padding: 8px 40px;
+  background-color: hsla(263, 100%, 66%, 1);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+
+.give6 {
+  border: none;
+  color: var(--color-primary);
+  padding: 8px 40px;
+  background-color: hsla(345, 81%, 75%, 1);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+
 /*Styling for buttons*/
 .buttons {
   display: flex;

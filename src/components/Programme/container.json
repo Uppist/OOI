@@ -2,36 +2,43 @@
   {
     "logo": "logo1.svg",
     "title": "Health",
-    "button": "View Programme"
+    "button": "View Programme",
+    "button2": "Donate"
   },
   {
     "logo": "logo2.svg",
     "title": "Education",
-    "button": "View Programme"
+    "button": "View Programme",
+    "button2": "Donate"
   },
   {
     "logo": "logo3.svg",
     "title": "Education",
-    "button": "View Programme"
+    "button": "View Programme",
+    "button2": "Donate"
   },
   {
     "logo": "logo4.svg",
     "title": "Health",
-    "button": "View Programme"
+    "button": "View Programme",
+    "button2": "Donate"
   },
   {
     "logo": "logo5.svg",
     "title": "Health",
-    "button": "View Programme"
+    "button": "View Programme",
+    "button2": "Donate"
   },
   {
     "logo": "logo6.svg",
     "title": "Charitable & Trust",
-    "button": "View Programme"
+    "button": "View Programme",
+    "button2": "Donate"
   },
   {
     "logo": "logo7.svg",
     "title": "Charitable & Trust",
-    "button": "View Programme"
+    "button": "View Programme",
+    "button2": "Donate"
   }
 ]

@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import { BrowserRouter } from "react-router-dom";
 import AboutUs from "./components/About/AboutUs";
 import Programme from "./components/Programme/Programme";
+import Givengo from "./components/Givengo/Givengo";
 
 export default function App() {
   return (
@@ -13,7 +14,8 @@ export default function App() {
       <div>
         <NavBar />
         {/* <AboutUs /> */}
-        <Programme />
+        {/* <Programme /> */}
+        <Givengo />
         <Footer />
       </div>
     </BrowserRouter>
