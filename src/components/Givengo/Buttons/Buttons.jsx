@@ -9,11 +9,11 @@ export default function Buttons() {
     <div className={styles.buttons}>
       <button>
         <img src={logo1} alt='' />
-        About Us
+        Programmes
       </button>
       <button>
         <img src={logo2} alt='' />
-        Givengo
+        Newsroom
       </button>
     </div>
   );

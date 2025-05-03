@@ -7,6 +7,7 @@ import GridContainer from "./Second/GridContainer";
 import Donations from "./Third/Donations";
 import Funds from "./Fourth/Funds";
 import Investment from "./Fifth/Investment";
+import Sustainability from "./Sixth/Sustainability";
 
 export default function Givengo() {
   return (
@@ -16,6 +17,7 @@ export default function Givengo() {
       <Donations />
       <Funds />
       <Investment />
+      <Sustainability />
       <Buttons />
     </>
   );

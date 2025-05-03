@@ -9,7 +9,6 @@ import logo3 from "../../../assets/Programme/logo3.svg";
 import logo4 from "../../../assets/Programme/logo4.svg";
 import logo5 from "../../../assets/Programme/logo5.svg";
 import logo6 from "../../../assets/Programme/logo6.svg";
-import logo7 from "../../../assets/Programme/logo7.svg";
 export default function GridContainer() {
   const logos = {
     "logo1.svg": logo1,
@@ -18,12 +17,11 @@ export default function GridContainer() {
     "logo4.svg": logo4,
     "logo5.svg": logo5,
     "logo6.svg": logo6,
-    "logo7.svg": logo7,
   };
 
   return (
     <div className={styles.gridContainer}>
-      {container.map((data, index) => (
+      {container.slice(0, -1).map((data, index) => (
         <div key={index} className={styles.gridItem}>
           <img src={logos[data.logo]} alt='' />
           <hr />

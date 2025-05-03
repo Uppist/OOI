@@ -1,0 +1,36 @@
+/** @format */
+
+.sustainability {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 60px 80px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.text h2 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 700;
+  font-family: var(--font-inter);
+  color: var(--color-orange);
+}
+
+.text > span {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: var(--font-inter);
+  color: var(--color-text2);
+  text-align: justify;
+}
+
+.link {
+  color: var(--color-orange);
+  font-weight: 600;
+  text-decoration: underline;
+}
