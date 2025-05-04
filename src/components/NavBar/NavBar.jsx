@@ -28,6 +28,10 @@ export default function NavBar({}) {
     setisMedia((prev) => !prev);
   }
 
+  function closeMedia() {
+    setisMedia(false);
+  }
+
   return (
     <header className={styles.firstsection}>
       <nav className={styles.nav}>
@@ -71,10 +75,22 @@ export default function NavBar({}) {
           <div className={styles.media}>
             {isMedia && (
               <ul>
-                <li>Partners</li>
-                <li>Newsroom</li>
-                <li>Gallery</li>
-                <li>Featured Reports</li>
+                <li>
+                  <Link to='/partners' onClick={closeMedia}>
+                    Partners
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/newsroom' onClick={closeMedia}>
+                    Newsroom
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/gallery'>Gallery</Link>
+                </li>
+                <li>
+                  <Link to='/reports'>Featured Reports</Link>
+                </li>
               </ul>
             )}
           </div>
