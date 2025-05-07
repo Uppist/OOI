@@ -16,6 +16,8 @@ export default function NavBar({}) {
 
   const [isMedia, setisMedia] = useState(false);
 
+  const [isEngage, setIsEngage] = useState(false);
+
   function sideBar() {
     setIsSidebarVisible(true);
   }
@@ -28,8 +30,13 @@ export default function NavBar({}) {
     setisMedia((prev) => !prev);
   }
 
+  function Engage() {
+    setIsEngage((prev) => !prev);
+  }
+
   function closeMedia() {
     setisMedia(false);
+    setIsEngage(false);
   }
 
   return (
@@ -86,17 +93,20 @@ export default function NavBar({}) {
                   </Link>
                 </li>
                 <li>
-                  <Link to='/gallery'>Gallery</Link>
+                  <Link to='/gallery' onClick={closeMedia}>
+                    Gallery
+                  </Link>
                 </li>
                 <li>
-                  <Link to='/reports'>Featured Reports</Link>
+                  <Link to='/reports' onClick={closeMedia}>
+                    Featured Reports
+                  </Link>
                 </li>
               </ul>
             )}
           </div>
 
-          {/* <Link to='/contactus'> */}
-          <li className={styles.lists}>
+          <li className={styles.lists} onClick={Engage}>
             Engage{" "}
             <svg
               width='24'
@@ -114,7 +124,32 @@ export default function NavBar({}) {
               />
             </svg>
           </li>
-          {/* </Link> */}
+          <div className={styles.media2}>
+            {isEngage && (
+              <ul>
+                <li>
+                  <Link to='/volunteer' onClick={closeMedia}>
+                    Volunteer
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/refer' onClick={closeMedia}>
+                    Refer a Non-profit
+                  </Link>
+                </li>
+                <li>
+                  <Link to='' onClick={closeMedia}>
+                    Donate to OOI
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/contactus' onClick={closeMedia}>
+                    Contact Us{" "}
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </div>
 
           <li className={styles.listmenu} onClick={sideBar}>
             <a className='dropdown'>

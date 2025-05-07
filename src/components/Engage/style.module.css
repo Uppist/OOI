@@ -1,0 +1,150 @@
+/** @format */
+
+.volunteer {
+  padding: 60px 80px;
+  margin-top: 140px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container h2 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 700;
+  font-family: var(--font-inter);
+  color: var(--color-orange);
+}
+
+.container span {
+  text-align: justify;
+  color: var(--color-text2);
+  font-size: 24px;
+  font-weight: 400;
+  font-family: var(--font-inter);
+  line-height: 1.5;
+}
+
+.container button {
+  width: fit-content;
+  padding: 12px 24px;
+  background-color: var(--color-orange);
+  border: 0;
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--font-inter);
+  margin-top: 20px;
+}
+
+/*Refer section*/
+
+.refer {
+  padding: 60px 80px;
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 158px;
+}
+
+.nonprofit {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header h2,
+.works div h2 {
+  font-size: 45px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-orange);
+  font-family: var(--font-inter);
+}
+
+.header span {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+  text-align: justify;
+}
+
+.header > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header div p,
+.works div span {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+  text-align: justify;
+}
+
+.works {
+  display: flex;
+  align-items: center;
+  gap: 135px;
+}
+
+.works > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/** @format */
+
+.fifth {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0 60px 120px;
+  align-items: center;
+  background-color: hsla(11, 100%, 97%, 1);
+  margin-top: 100px;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.button span {
+  font-size: 45px;
+  font-family: var(--font-inter);
+  color: var(--color-orange);
+  font-weight: 500;
+}
+
+.button span label {
+  font-weight: 800;
+}
+
+.button button {
+  width: fit-content;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--color-orange);
+  color: var(--color-primary);
+  font-family: var(--font-inter);
+}
