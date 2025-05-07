@@ -64,7 +64,7 @@ export default function Refer() {
       <div className={styles.fifth}>
         <div className={styles.button}>
           <span>
-            Together we can make <label>greater impact</label>
+            Together we can make{""} <label>greater impact</label>
           </span>
           <button>Refer a Nonprofit</button>
         </div>
