@@ -161,28 +161,13 @@
     font-size: 18px;
     font-weight: 600;
     color: var(--color-text);
-    font-family: var(--font-source);
+    font-family: var(--font-inter);
     cursor: pointer;
   }
 
   .sidebarmenu hr {
     /* border: 1px solid var(--color-background); */
     width: -webkit-fill-available;
-  }
-
-  .sidebarcontact {
-    margin-top: 40px;
-    margin-left: 30px;
-    background-color: var(--color-bg);
-    font-size: 16px;
-    font-family: var(--font-source);
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    color: var(--color-primary);
-    /* text-transform: uppercase; */
-    width: fit-content;
-    text-align: center;
   }
 }
 

@@ -2,6 +2,7 @@
 
 import React from "react";
 import styles from "./NavBar.module.css";
+import { Link } from "react-router-dom";
 
 export default function MobileNav({ isSidebarVisible, onClose, logo }) {
   return (
@@ -11,8 +12,9 @@ export default function MobileNav({ isSidebarVisible, onClose, logo }) {
       }`}
     >
       <div className={styles.imageclose}>
-        {/* <Link to='/'> */}
-        <img src={logo} alt='' /> {/* </Link> */}
+        <Link to='/OOI'>
+          <img src={logo} alt='' />{" "}
+        </Link>
         <a className='dropdown-close' onClick={onClose}>
           <svg
             width='24'
@@ -33,46 +35,44 @@ export default function MobileNav({ isSidebarVisible, onClose, logo }) {
       </div>
 
       <ul className={styles.sidebarmenu}>
-        {/* <Link to='/'> */}
-        <li
-          className={styles.sidebarlist}
-          onClick={() => {
-            onClose();
-          }}
-        >
-          About Us{" "}
-        </li>
-        {/* </Link> */}
+        <Link to='/OOI'>
+          <li
+            className={styles.sidebarlist}
+            onClick={() => {
+              onClose();
+            }}
+          >
+            About Us{" "}
+          </li>
+        </Link>
         <hr />
-        {/* <Link to='/aboutus'> */}
-        <li
-          className={styles.sidebarlist}
-          onClick={() => {
-            onClose();
-          }}
-        >
-          Programmes
-        </li>
-        {/* </Link> */}
+        <Link to='/programme'>
+          <li
+            className={styles.sidebarlist}
+            onClick={() => {
+              onClose();
+            }}
+          >
+            Programmes
+          </li>
+        </Link>
         <hr />
-        {/* <Link to='/services'> */}
-        <li
-          className={styles.sidebarlist}
-          onClick={() => {
-            onClose();
-          }}
-        >
-          Givengo{" "}
-        </li>
-        {/* </Link> */}
+        <Link to='/givengo'>
+          <li
+            className={styles.sidebarlist}
+            onClick={() => {
+              onClose();
+            }}
+          >
+            Givengo{" "}
+          </li>
+        </Link>
         <hr />
-        {/* <Link to='/Articles'> */}
         <li className={styles.sidebarlist}>Media </li>
-        {/* </Link> */}
         <hr />
         {/* <Link to='/contactus'> */}
         <li
-          className={styles.sidebarcontact}
+          className={styles.sidebarlist}
           onClick={() => {
             onClose();
           }}

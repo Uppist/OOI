@@ -1,0 +1,145 @@
+/** @format */
+
+.operation {
+  padding: 120px 0 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.text h2 {
+  margin: 0;
+  font-size: 45px;
+  color: var(--color-orange);
+  font-family: var(--font-inter);
+  font-weight: 700;
+}
+
+.text span {
+  font-size: 24px;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+  font-weight: 400;
+}
+
+.text p {
+  margin: 0;
+  font-size: 24px;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+  font-weight: 600;
+}
+
+.text ul,
+.ul ul {
+  margin: 0;
+  font-size: 24px;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+}
+
+.text ul span {
+  font-weight: 500;
+}
+
+/* .text ul li,
+.ul ul li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+} */
+.ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ul span {
+  font-size: 24px;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .operation {
+    padding: 60px 24px;
+    gap: 12px;
+  }
+
+  .text {
+    margin-top: -35px;
+  }
+
+  .text h2 {
+    position: relative;
+    top: -330px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .image > img {
+    width: 360px;
+    order: -1;
+  }
+
+  .image {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .text span,
+  .text ul,
+  .ul span,
+  .text p,
+  .ul ul {
+    font-size: 16px;
+  }
+
+  .text ul,
+  .ul ul {
+    padding: 0 15px;
+    gap: 12px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .operation {
+    padding: 60px 24px;
+    gap: 12px;
+  }
+  .image {
+    flex-direction: column;
+    gap: 0;
+  }
+  .image > img {
+    order: -1;
+  }
+
+  .text {
+    margin-top: -35px;
+  }
+
+  .text h2 {
+    position: relative;
+    top: -570px;
+    text-align: center;
+  }
+}

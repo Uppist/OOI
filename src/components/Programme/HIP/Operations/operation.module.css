@@ -1,0 +1,89 @@
+/** @format */
+
+.operation {
+  padding: 120px 0 0 80px;
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+
+.operation div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.operation div label {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+}
+
+.operation div span {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+}
+
+.operation ul {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+}
+
+.operation ul li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .operation {
+    flex-direction: column;
+    padding: 60px 24px 0;
+    gap: 20px;
+  }
+
+  .operation > img {
+    width: 360px;
+    order: -1;
+  }
+
+  .operation div {
+    gap: 12px;
+  }
+
+  .operation div label,
+  .operation div span,
+  .operation div ul {
+    font-size: 16px;
+  }
+
+  .operation div ul {
+    padding: 0 0 0 10px;
+    text-align: justify;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .operation {
+    flex-direction: column;
+    padding: 60px 24px 0;
+    gap: 20px;
+  }
+
+  .operation > img {
+    order: -1;
+  }
+
+  .operation div {
+    gap: 12px;
+  }
+}

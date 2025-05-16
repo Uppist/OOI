@@ -10,6 +10,7 @@ import logo4 from "../../assets/Programme/logo4.svg";
 import logo5 from "../../assets/Programme/logo5.svg";
 import logo6 from "../../assets/Programme/logo6.svg";
 import logo7 from "../../assets/Programme/logo7.svg";
+import { Link } from "react-router-dom";
 export default function GridContainer() {
   const logos = {
     "logo1.svg": logo1,
@@ -30,7 +31,7 @@ export default function GridContainer() {
           <div className={styles.text}>
             <span>{data.title}</span>
             <button className={styles[`button${index + 1}`]}>
-              {data.button}
+              <Link to={data.link}>{data.button}</Link>
             </button>
           </div>
         </div>

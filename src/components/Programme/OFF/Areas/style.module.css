@@ -1,0 +1,124 @@
+/** @format */
+.area {
+  padding: 120px 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.core {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+}
+
+.core h2 {
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-orange);
+  font-family: var(--font-inter);
+  margin: 0;
+}
+
+.core span {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.p {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+
+.p:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.p div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.p span {
+  font-size: 24px;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.p p {
+  margin: 0;
+  font-size: 24px;
+  text-align: justify;
+  font-weight: 400;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+}
+
+@media only screen and (max-width: 768px) {
+  .area {
+    padding: 60px 24px;
+    gap: 20px;
+  }
+
+  .container {
+    gap: 60px;
+  }
+  .p,
+  .p:nth-child(even) {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .p img {
+    width: 312px;
+  }
+
+  .p div {
+    gap: 11px;
+  }
+
+  .core h2 {
+    font-size: 24px;
+  }
+
+  .core span,
+  .p span,
+  .p p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .area {
+    padding: 60px 24px;
+    gap: 20px;
+  }
+
+  .container {
+    gap: 60px;
+  }
+  .p,
+  .p:nth-child(even) {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

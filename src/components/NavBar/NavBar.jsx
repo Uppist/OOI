@@ -7,7 +7,7 @@ import GivengoLogo from "../../assets/Givengo/givengo.svg";
 import { Link, useLocation } from "react-router-dom";
 import MobileNav from "./MobileNav";
 
-export default function NavBar({}) {
+export default function NavBar() {
   const location = useLocation();
 
   const logo = location.pathname === "/givengo" ? GivengoLogo : Logo;

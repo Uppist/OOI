@@ -14,6 +14,9 @@ import Reports from "./components/Media/Reports/Reports";
 import Contact from "./components/Engage/Contact/Contact";
 import Volunteer from "./components/Engage/Volunteer";
 import Refer from "./components/Engage/Refer";
+import Hip from "./components/Programme/HIP/Hip";
+import Off from "./components/Programme/OFF/Off";
+import DonateHip from "./components/Donate/DonateHip";
 
 export default function App() {
   return (
@@ -24,7 +27,19 @@ export default function App() {
           <Route path='/OOI' element={<AboutUs />} />
           {/* <Route path='/about' element={<AboutUs />} /> */}
           <Route path='/programme' element={<Programme />} />
+          {/*Route for different programmes */}
+          <Route path='/health-impact-programme' element={<Hip />} />
+          <Route path='/october-future-fund' element={<Off />} />
+
           <Route path='/givengo' element={<Givengo />} />
+
+          {/*Route for donation */}
+          <Route path='/donate-to-hip' element={<DonateHip />} />
+          <Route path='/donate-to-off' element={<DonateHip />} />
+          <Route path='/donate-to-ffi' element={<DonateHip />} />
+          <Route path='/donate-to-tgp' element={<DonateHip />} />
+          <Route path='/donate-to-hbi' element={<DonateHip />} />
+          <Route path='/donate-to-tgt' element={<DonateHip />} />
 
           {/*Route for Media Section */}
           <Route path='/partners' element={<Partners />} />

@@ -1,0 +1,102 @@
+/** @format */
+
+.mission {
+  padding: 120px 80px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.missionImage {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.missionText,
+.missionText2 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.missionText label {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+}
+
+.missionText span,
+.missionText2 span {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+  text-align: justify;
+}
+
+.missionText ul,
+.missionText2 ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 24px;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+}
+
+.missionText ul li,
+.missionText2 ul li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+@media only screen and (max-width: 768px) {
+  /*Styling for mission section*/
+
+  .mission {
+    padding: 40px 24px 0;
+    gap: 20px;
+  }
+
+  .missionImage {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .missionImage > img {
+    width: 312px;
+    order: -1;
+  }
+  .missionText,
+  .missionText2 {
+    gap: 16px;
+  }
+
+  .missionText label,
+  .missionText ul,
+  .missionText span,
+  .missionText2 span,
+  .missionText2 ul {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  /*Styling for mission*/
+  .mission {
+    padding: 40px 24px 0;
+    gap: 20px;
+  }
+
+  .missionImage {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .missionImage > img {
+    order: -1;
+  }
+}

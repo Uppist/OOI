@@ -1,11 +1,16 @@
 [
   {
+    "link": "/health-impact-programme",
+    "donate": "/donate-to-hip",
     "logo": "logo1.svg",
     "title": "Health",
     "button": "View Programme",
     "button2": "Donate"
   },
   {
+    "link": "/october-future-fund",
+    "donate": "/donate-to-off",
+
     "logo": "logo2.svg",
     "title": "Education",
     "button": "View Programme",
@@ -13,6 +18,8 @@
   },
   {
     "logo": "logo3.svg",
+    "donate": "/donate-to-ffi",
+
     "title": "Education",
     "button": "View Programme",
     "button2": "Donate"
@@ -20,18 +27,23 @@
   {
     "logo": "logo4.svg",
     "title": "Health",
+    "donate": "/donate-to-tgp",
+
     "button": "View Programme",
     "button2": "Donate"
   },
   {
     "logo": "logo5.svg",
     "title": "Health",
+    "donate": "/donate-to-hbi",
+
     "button": "View Programme",
     "button2": "Donate"
   },
   {
     "logo": "logo6.svg",
     "title": "Charitable & Trust",
+    "donate": "/donate-to-tgt",
     "button": "View Programme",
     "button2": "Donate"
   },

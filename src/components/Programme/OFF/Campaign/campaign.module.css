@@ -1,0 +1,131 @@
+/** @format */
+
+.campaign {
+  padding: 120px 80px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.text h2 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-orange);
+  font-family: var(--font-inter);
+}
+
+.text div,
+.p p {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.p {
+  padding: 0 0 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.text div p,
+.p p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+  text-align: justify;
+}
+
+.p button {
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--color-orange);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-primary);
+  font-family: var(--font-inter);
+  cursor: pointer;
+  width: fit-content;
+}
+
+@media only screen and (max-width: 768px) {
+  .campaign {
+    padding: 60px 24px 0;
+  }
+  .image {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text h2 {
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    top: -340px;
+  }
+
+  .text {
+    margin-top: -45px;
+  }
+
+  .text div p,
+  .p p {
+    font-size: 16px;
+  }
+
+  .text div {
+    gap: 12px;
+  }
+
+  .image img {
+    width: 360px;
+  }
+
+  .p {
+    padding: 0;
+    gap: 12px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .campaign {
+    padding: 60px 24px 0;
+  }
+  .image {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text h2 {
+    text-align: center;
+    position: relative;
+    top: -585px;
+  }
+
+  .text {
+    margin-top: -45px;
+  }
+
+  .text div {
+    gap: 12px;
+  }
+
+  .p {
+    padding: 0;
+  }
+}

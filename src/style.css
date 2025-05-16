@@ -21,6 +21,8 @@ body::-webkit-scrollbar {
   --color-dark: #0b2447;
   --color-orange: hsla(12, 100%, 60%, 1);
   --color-background: hsla(0, 0%, 12%, 1);
+  --color-health: hsla(219, 79%, 66%, 1);
+
   /* Fonts */
   --font-inter: "Inter";
   --font-montserrat: "Montserrat";

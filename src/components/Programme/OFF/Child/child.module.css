@@ -1,0 +1,115 @@
+/** @format */
+
+.child {
+  display: flex;
+  padding: 120px 80px;
+  height: 370px;
+  align-items: center;
+}
+
+.child img {
+  position: absolute;
+  right: 90px;
+}
+
+.child div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px;
+  background-color: hsla(11, 100%, 97%, 1);
+  height: 330px;
+  width: -webkit-fill-available;
+  border-radius: 16px;
+  box-shadow: 0px 10px 25px hsla(167, 22%, 17%, 0.08);
+}
+
+.child div h2 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 600;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+  width: 596px;
+}
+
+.child div span {
+  font-weight: 900;
+  color: var(--color-orange);
+}
+
+.child div p {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+  width: 703px;
+}
+
+@media only screen and (max-width: 768px) {
+  .child {
+    flex-direction: column;
+    padding: 40px 0 0 0;
+    background-color: hsla(11, 100%, 97%, 1);
+    margin-top: 100px;
+    /* gap: 100px; */
+    height: fit-content;
+  }
+
+  .child div {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    gap: 12px;
+    padding: 0 40px;
+    justify-content: flex-start;
+  }
+
+  .child div h2 {
+    font-size: 24px;
+    width: 300px;
+  }
+
+  .child div p {
+    font-size: 16px;
+    width: 300px;
+  }
+
+  .child img {
+    width: 275px;
+    position: relative;
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1256px) {
+  .child {
+    flex-direction: column;
+    padding: 40px 0 0 0;
+    background-color: hsla(11, 100%, 97%, 1);
+    margin-top: 100px;
+    /* gap: 100px; */
+    height: fit-content;
+  }
+
+  .child div h2,
+  .child div p {
+    text-align: center;
+  }
+  .child div {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    gap: 12px;
+    padding: 0 40px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .child img {
+    position: relative;
+    right: 0;
+  }
+}
