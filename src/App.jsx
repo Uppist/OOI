@@ -17,6 +17,7 @@ import Refer from "./components/Engage/Refer";
 import Hip from "./components/Programme/HIP/Hip";
 import Off from "./components/Programme/OFF/Off";
 import DonateHip from "./components/Donate/DonateHip";
+import FFI from "./components/Programme/FFI/FFI";
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
           {/*Route for different programmes */}
           <Route path='/health-impact-programme' element={<Hip />} />
           <Route path='/october-future-fund' element={<Off />} />
+          <Route path='/future-forward-initiative' element={<FFI />} />
 
           <Route path='/givengo' element={<Givengo />} />
 

@@ -1,0 +1,106 @@
+/** @format */
+
+.overview {
+  padding: 120px 80px 0px 0;
+  margin-top: 100px;
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.text {
+  display: flex;
+}
+
+.text span {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+}
+
+.container h2 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-forward);
+  font-family: var(--font-inter);
+}
+
+.container p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: var(--font-inter);
+  color: var(--color-text2);
+  text-align: justify;
+}
+
+.container p span {
+  font-weight: 600;
+}
+@media only screen and (max-width: 768px) {
+  /*styling for overview section*/
+  .overview {
+    flex-direction: column;
+    padding: 120px 24px 0;
+    gap: 15px;
+  }
+
+  .overview img {
+    width: 312px;
+  }
+
+  .text {
+    position: relative;
+    top: -400px;
+  }
+
+  .text span {
+    font-size: 16px;
+  }
+
+  .container h2 {
+    font-size: 24px;
+    position: relative;
+    top: -400px;
+  }
+
+  .container {
+    gap: 0;
+    margin-top: -20px;
+  }
+
+  .container p {
+    font-size: 16px;
+    position: relative;
+    top: -50px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .overview {
+    flex-direction: column;
+    padding: 120px 24px 0;
+  }
+
+  .text,
+  .container h2 {
+    position: relative;
+    top: -715px;
+  }
+
+  .container {
+    gap: 0;
+  }
+
+  .container p {
+    position: relative;
+    top: -115px;
+  }
+}

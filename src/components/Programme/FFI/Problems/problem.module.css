@@ -1,0 +1,110 @@
+/** @format */
+
+.problem {
+  padding: 120px 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+
+.container h2 {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-forward);
+  font-family: var(--font-inter);
+}
+.container > span,
+.ordered > span {
+  font-size: 24px;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+  font-weight: 400;
+  text-align: justify;
+}
+
+.container div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.container div span {
+  font-size: 24px;
+  color: var(--color-forward);
+  font-family: var(--font-inter);
+  font-weight: 400;
+}
+
+.ordered {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.ordered ol {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: var(--font-inter);
+  color: var(--color-text2);
+  text-align: justify;
+}
+
+.ordered ol li::marker {
+  color: var(--color-forward);
+  font-weight: 500;
+}
+
+.ordered ol li span {
+  font-weight: 500;
+  color: var(--color-forward);
+}
+
+@media only screen and (max-width: 768px) {
+  .problem {
+    padding: 60px 24px 0;
+  }
+  .container {
+    gap: 12px;
+  }
+
+  .container div img {
+    width: 296px;
+  }
+
+  .container h2 {
+    font-size: 24px;
+  }
+  .ordered ol,
+  .container > span,
+  .ordered > span {
+    font-size: 16px;
+  }
+
+  .ordered ol {
+    padding: 0 10px;
+  }
+
+  .container div span {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .problem {
+    padding: 60px 24px 0;
+  }
+}

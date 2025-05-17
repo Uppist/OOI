@@ -1,0 +1,50 @@
+/** @format */
+
+.contribute {
+  padding: 120px 80px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.contribute > p,
+.contribute div span {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text);
+  font-family: var(--font-inter);
+}
+
+.contribute div p {
+  color: var(--color-text);
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: var(--font-inter);
+}
+
+.contribute > p span {
+  font-weight: 500;
+  color: var(--color-forward);
+}
+
+.contribute div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contribute div h2 {
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-forward);
+  font-family: var(--font-inter);
+  margin: 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+}
