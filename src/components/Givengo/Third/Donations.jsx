@@ -8,10 +8,10 @@ import check from "../../../assets/check_circle.svg";
 export default function Donations() {
   return (
     <div className={styles.overview}>
-      <div className={styles.content}>
+      <div className={`${styles.content} ${styles.donateimg}`}>
         <img src={image2} alt='' />
 
-        <div className={styles.textContent}>
+        <div className={`${styles.textContent} ${styles.donate}`}>
           <h2>Donations Management </h2>
           <p>
             OOI is committed to securing sustainable and ethical funding to

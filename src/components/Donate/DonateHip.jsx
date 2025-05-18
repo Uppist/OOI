@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./donate.module.css";
 import logo from "../../assets/Donate/logo1.svg";
 import logo2 from "../../assets/Donate/logo2.svg";
@@ -19,6 +19,20 @@ export default function DonateHip() {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+
+  const [isDropDown, setIsDropDown] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("Select Title");
+
+  const options = ["Mr.", "Mrs.", "Miss", "Dr."];
+
+  function Dropdown() {
+    setIsDropDown((prev) => !prev);
+  }
+
+  function Select(options) {
+    setSelectedOption(options);
+    setIsDropDown(false);
+  }
 
   const pageConfig = {
     "/donate-to-hip": {
@@ -115,10 +129,22 @@ export default function DonateHip() {
       <div className={styles.information}>
         <label htmlFor=''>Personal Information</label>
         <div className={styles.input}>
-          <div className={styles.title}>
-            <span>Select Title</span>
+          <div className={styles.title} onClick={Dropdown}>
+            <span>{selectedOption}</span>
             <img src={down} alt='' />
           </div>
+          {isDropDown && (
+            <div className={styles.dropdown}>
+              {options.map((data, index) => (
+                <>
+                  <span key={index} onClick={() => Select(data)}>
+                    {data}
+                  </span>
+                  <hr />
+                </>
+              ))}
+            </div>
+          )}
           <div>
             <input type='text' placeholder='First Name' />
             <input type='text' placeholder='Middle Name' />

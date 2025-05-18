@@ -2,6 +2,7 @@
 
 .firstSection {
   margin-top: 105px;
+  background: url("../../../assets/Aboutus/path.png") no-repeat;
 }
 .firstSection > img {
   filter: brightness(20%);
@@ -14,6 +15,10 @@
   display: grid;
   gap: 37px;
   place-items: center;
+}
+
+.mobileImage {
+  display: none;
 }
 
 .text {
@@ -40,4 +45,34 @@
   font-weight: 400;
   color: var(--color-primary2);
   width: 70%;
+}
+
+@media only screen and (max-width: 768px) {
+  .firstSection {
+    margin-top: 80px;
+  }
+  .mobileImage {
+    display: block;
+    width: -webkit-fill-available;
+  }
+
+  .desktopImage {
+    display: none;
+  }
+
+  .text h2 {
+    font-size: 30px;
+    width: 270px;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+
+  .textContainer img {
+    width: 26px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
 }

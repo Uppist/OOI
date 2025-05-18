@@ -30,12 +30,6 @@
   font-family: var(--font-inter);
 }
 
-.logo1 {
-}
-
-.logo2 {
-}
-
 .amount {
   display: flex;
   flex-direction: column;
@@ -109,7 +103,7 @@
 
 .naira {
   color: var(--color-primary);
-  padding: 24px;
+  padding: 21px;
   font-size: 16px;
   font-weight: 400;
   background-color: var(--color-health);
@@ -148,7 +142,7 @@
 .title {
   padding: 16px 24px;
   border: 1px solid hsla(0, 0%, 63%, 1);
-  color: hsla(0, 0%, 63%, 1);
+  color: var(--color-text);
   width: fit-content;
   font-family: var(--font-inter);
   font-size: 18px;
@@ -184,6 +178,33 @@
   font-family: var(--font-inter);
   cursor: pointer;
   background-color: var(--color-health);
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0;
+  position: absolute;
+  margin-top: 50px;
+  background-color: var(--color-primary);
+  box-shadow: 0px 10px 25px hsla(0, 0%, 94%, 0.5);
+  gap: 0 !important;
+  width: 100px;
+}
+
+.dropdown hr {
+  margin: 0;
+  width: -webkit-fill-available;
+  border: 1px solid hsla(0, 0%, 94%, 0.5);
+}
+
+.dropdown span {
+  font-size: 24px;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  color: var(--color-text);
+  padding: 16px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
@@ -245,6 +266,9 @@
     justify-content: center;
   }
 
+  .title {
+    font-size: 16px;
+  }
   .input {
     gap: 10px;
   }
@@ -262,6 +286,11 @@
   .button {
     flex-direction: column-reverse;
     margin-top: 35px;
+  }
+
+  .dropdown span {
+    font-size: 16px;
+    padding: 8px;
   }
 }
 

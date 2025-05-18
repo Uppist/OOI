@@ -105,7 +105,7 @@ export default function Footer() {
       <hr />
       <div className={styles.footer2}>
         <div>
-          <Link to='/'>
+          <Link to='/OOI'>
             <Footerlogo />
           </Link>
           <h2>Inspiring Change, Driving Impact</h2>
@@ -114,10 +114,10 @@ export default function Footer() {
           <label>Quick Links</label>
 
           <ul>
-            <Link to='/'>
+            <Link to='/programme'>
               <li>Programmes</li>
             </Link>
-            <Link to='/aboutus'>
+            <Link to='/givengo'>
               {" "}
               <li>Givengo</li>
             </Link>

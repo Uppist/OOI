@@ -248,3 +248,39 @@ hr {
   cursor: pointer;
   color: var(--color-orange);
 }
+
+@media only screen and (max-width: 768px) {
+  .programme {
+    padding: 60px 24px 0;
+  }
+
+  .programme h2 {
+    font-size: 24px;
+  }
+
+  .p p {
+    font-size: 16px;
+  }
+
+  .gridContainer {
+    padding: 0;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .buttons {
+    flex-direction: column;
+    /* width: fit-content; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .gridItem {
+    height: fit-content;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+}

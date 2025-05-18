@@ -1,6 +1,6 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import FirstSection from "./First/FirstSection";
 import Second from "./Second/Second";
 import Third from "./Third/Third";

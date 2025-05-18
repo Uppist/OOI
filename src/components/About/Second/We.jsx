@@ -10,7 +10,9 @@ export default function We() {
       <img src={image2} alt='' />
 
       <div className={styles.textwe}>
-        <label htmlFor=''>Who We Are</label>
+        <label htmlFor=''>
+          Who We Are <hr />
+        </label>
         <h2>Our Initiatives, A Connected World</h2>
         <p>
           The October Orange Initiative (OOI) is committed to catalysing

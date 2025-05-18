@@ -3,6 +3,8 @@
 import React from "react";
 import styles from "./contribute.module.css";
 import contribute from "../../../../assets/Programme/FFI/contribute.png";
+import contribut2 from "../../../../assets/Programme/FFI/contribute2.png";
+import contribut3 from "../../../../assets/Programme/FFI/contribute3.png";
 
 export default function Contribution() {
   return (
@@ -20,6 +22,10 @@ export default function Contribution() {
       </div>
 
       <img src={contribute} alt='' />
+      <div className={styles.image}>
+        <img src={contribut2} alt='' />
+        <img src={contribut3} alt='' />
+      </div>
       <p>
         The <span>key components of the FFI programme</span> will cover matters
         such as:

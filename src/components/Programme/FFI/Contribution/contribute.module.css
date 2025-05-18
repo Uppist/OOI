@@ -43,8 +43,46 @@
   text-align: center;
 }
 
+.image img {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
+  .image {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .image img {
+    display: flex;
+  }
+
+  .contribute {
+    padding: 60px 24px 0;
+    gap: 0;
+  }
+
+  .contribute > img {
+    display: none;
+  }
+
+  .contribute div h2 {
+    font-size: 24px;
+  }
+  .contribute div p,
+  .contribute > p,
+  .contribute div span {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .image img {
+    display: none;
+  }
+  .contribute {
+    padding: 60px 24px 0;
+    gap: 0;
+  }
 }

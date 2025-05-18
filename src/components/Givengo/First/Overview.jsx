@@ -1,15 +1,20 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./style.module.css";
 import image1 from "../../../assets/Givengo/image1.png";
 
 export default function Overview() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className={styles.overview}>
       <div className={styles.content}>
         <div className={styles.text}>
-          <label htmlFor=''>Overview</label>
+          <label htmlFor=''>
+            Overview <hr />
+          </label>
           <div className={styles.textContent}>
             <h2>Givengo</h2>
             <p>

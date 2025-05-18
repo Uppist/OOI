@@ -87,6 +87,7 @@
   .overview {
     flex-direction: column;
     padding: 120px 24px 0;
+    align-items: center;
   }
 
   .text,

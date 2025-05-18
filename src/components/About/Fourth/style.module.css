@@ -36,7 +36,7 @@
 
 .content ul {
   /* padding: 0; */
-  /* margin: 0; */
+  margin: 0;
 
   list-style: none;
   display: flex;
@@ -108,4 +108,70 @@
   color: var(--color-text2);
   font-family: var(--font-inter);
   text-align: justify;
+}
+
+@media only screen and (max-width: 768px) {
+  .assessment {
+    padding: 60px 24px 0;
+  }
+
+  .image {
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: end;
+  }
+
+  .assessment h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .image > img {
+    width: 312px;
+  }
+
+  .text p,
+  .content ul,
+  .sustainability p,
+  .content li,
+  .content p {
+    font-size: 16px;
+  }
+
+  .content ul img {
+    width: 11px;
+  }
+
+  .content ul {
+    padding: 0 10px;
+    margin-top: 10px;
+  }
+
+  .sustainability {
+    padding: 60px 24px 0;
+    margin-top: 70px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .container img {
+    width: 312px;
+  }
+
+  .text {
+    gap: 0;
+    margin-top: -35px;
+  }
+
+  .text h2 {
+    font-size: 24px;
+    position: relative;
+    top: -330px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
 }

@@ -156,7 +156,11 @@ a {
   }
 
   .footer hr {
-    border: 0.75px solid var(--color-bg);
+    border: 0.75px solid var(--color-orange);
+  }
+
+  .footer2 img {
+    width: 87px;
   }
 
   .uppist {
@@ -208,6 +212,7 @@ a {
 
   .connect div {
     gap: 12px;
+    align-items: baseline;
   }
 
   .footer > label {

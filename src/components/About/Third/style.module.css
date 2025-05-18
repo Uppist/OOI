@@ -72,3 +72,40 @@
   color: var(--color-text);
   text-align: justify;
 }
+
+@media only screen and (max-width: 768px) {
+  .third {
+    padding: 60px 24px 0;
+    gap: 30px;
+  }
+
+  .texts h2 {
+    font-size: 24px;
+  }
+  .texts p {
+    font-size: 16px;
+  }
+
+  .image,
+  .image:nth-of-type(even) {
+    flex-direction: column;
+    gap: 0;
+    align-items: end;
+  }
+
+  .images {
+    gap: 50px;
+  }
+
+  .image img {
+    width: 312px;
+  }
+
+  .text h2,
+  .text p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+}
