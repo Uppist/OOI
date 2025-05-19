@@ -181,7 +181,7 @@ form {
 @media only screen and (max-width: 768px) {
   .contact {
     margin-top: 110px;
-    grid-template-columns: 1fr;
+    flex-direction: column-reverse;
     padding: 0 30px;
   }
   .image {
@@ -205,9 +205,14 @@ form {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    text-align: center;
   }
 
   .form h2 {
+    font-size: 24px;
+  }
+
+  .locate span {
     font-size: 16px;
   }
 
@@ -224,7 +229,7 @@ form {
   }
 
   .menu {
-    margin-top: 575px;
+    margin-top: 345px;
     padding: 0;
     font-size: 18px;
   }

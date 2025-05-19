@@ -1,9 +1,12 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./newsroom.module.css";
 
 export default function Newsroom() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className={styles.newsroom}>
       <h2>Newsroom</h2>

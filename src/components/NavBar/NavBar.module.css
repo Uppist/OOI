@@ -30,7 +30,7 @@
   font-size: 18px;
   font-weight: 500;
   font-family: var(--font-inter);
-
+  padding: 0s;
   color: var(--color-text);
   cursor: pointer;
 }
@@ -155,7 +155,21 @@
     margin: 0;
     margin-top: 20px;
   }
+  .dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 40px 20px;
+    gap: 20px;
+    font-size: 20px;
+    font-family: var(--font-inter);
+    font-weight: 400;
+    color: var(--color-text);
+  }
 
+  .dropdown span {
+    cursor: pointer;
+  }
   .sidebarlist {
     padding: 12px 20px;
     font-size: 18px;
@@ -163,10 +177,16 @@
     color: var(--color-text);
     font-family: var(--font-inter);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
+  .rotate {
+    transform: rotate(90deg);
+  }
   .sidebarmenu hr {
-    /* border: 1px solid var(--color-background); */
+    border: 1px solid hsla(33, 93%, 94%, 1);
     width: -webkit-fill-available;
   }
 }

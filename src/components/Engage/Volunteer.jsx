@@ -1,10 +1,13 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./style.module.css";
 import image from "../../assets/Engage/volunteer.png";
 
 export default function Volunteer() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className={styles.volunteer}>
       <div className={styles.container}>

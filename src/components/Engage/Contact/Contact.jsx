@@ -12,6 +12,9 @@ import location from "../../../assets/Engage/Vector2.svg";
 // import { ToastContainer, toast } from "react-toastify";
 
 export default function Contact() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   const form = useRef();
 
   // function sendEmail(e) {

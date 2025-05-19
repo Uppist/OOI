@@ -121,13 +121,13 @@ export default function Footer() {
               {" "}
               <li>Givengo</li>
             </Link>
-            <Link to='/service'>
+            <Link to='/gallery'>
               <li>Gallery</li>
             </Link>
-            <Link to='/contactus'>
+            <Link to='/volunteer'>
               <li>Volunteer</li>
             </Link>
-            <Link to='/contactus'>
+            <Link to='/refer'>
               <li>Refer a Nonprofit</li>
             </Link>{" "}
             <Link to='/contactus'>

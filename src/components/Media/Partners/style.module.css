@@ -81,3 +81,47 @@
   color: var(--color-orange);
   font-weight: 600;
 }
+
+@media only screen and (max-width: 768px) {
+  .partner {
+    padding: 60px 24px 0;
+    gap: 70px;
+  }
+
+  .content h2,
+  .partners h2 {
+    font-size: 24px;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+
+  .container2 {
+    flex-direction: column;
+    padding: 40px;
+    align-items: center;
+  }
+
+  .partners {
+    gap: 30px;
+  }
+
+  .container img {
+    margin: 0;
+    width: 200px;
+  }
+
+  .container span {
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .container hr {
+    width: -webkit-fill-available;
+    border: 1px solid hsla(0, 11%, 91%, 1);
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+}

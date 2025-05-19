@@ -1,10 +1,13 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./overview.module.css";
 import overview from "../../../../assets/Programme/HIP/overview.png";
 
 export default function Overview() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className={styles.overview}>
       <img src={overview} alt='' />

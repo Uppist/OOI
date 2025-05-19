@@ -46,3 +46,27 @@
   font-weight: 700;
   /* color: var(--color-orange); */
 }
+
+@media only screen and (max-width: 768px) {
+  .newsroom {
+    padding: 60px 24px 0;
+  }
+
+  .newsroom h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .p p,
+  .p span {
+    font-size: 16px;
+  }
+
+  .p ul {
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+}

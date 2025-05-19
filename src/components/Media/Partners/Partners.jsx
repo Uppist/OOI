@@ -1,10 +1,13 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import OurPartners from "./OurPartners";
 import styles from "./style.module.css";
 
 export default function Partners() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className={styles.partner}>
       <div className={styles.content}>
