@@ -21,7 +21,12 @@ export default function MobileNav({ isSidebarVisible, onClose, logo }) {
       }`}
     >
       <div className={styles.imageclose}>
-        <Link to='/OOI'>
+        <Link
+          to='/OOI'
+          onClick={() => {
+            onClose();
+          }}
+        >
           <img src={logo} alt='' />{" "}
         </Link>
         <a className='dropdown-close' onClick={onClose}>

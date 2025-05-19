@@ -190,7 +190,8 @@
   }
 
   .works img,
-  .volunteer img {
+  .volunteer img,
+  .nonprofit img {
     width: 312px;
   }
 
