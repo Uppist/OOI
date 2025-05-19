@@ -189,7 +189,8 @@
     gap: 70px;
   }
 
-  .nonprofit img {
+  .works img,
+  .volunteer img {
     width: 312px;
   }
 
