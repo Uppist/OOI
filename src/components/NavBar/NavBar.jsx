@@ -42,10 +42,10 @@ export default function NavBar() {
   return (
     <header className={styles.firstsection}>
       <nav className={styles.nav}>
-        {/* <Link to='/'> */}
-        {/* <LogoNav /> */}
-        <img src={logo} alt='Logo' />
-        {/* </Link> */}
+        <Link to='/OOI'>
+          {/* <LogoNav /> */}
+          <img src={logo} alt='Logo' />
+        </Link>
 
         <ul className={styles.navul}>
           <Link to='/OOI' OOI>

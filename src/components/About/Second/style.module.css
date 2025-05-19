@@ -163,11 +163,13 @@
     font-size: 24px;
     position: relative;
     top: -380px;
+    text-align: center;
   }
 
   .textphil {
     flex-direction: column-reverse;
     gap: 0;
+    align-items: end;
   }
 
   .text {
