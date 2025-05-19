@@ -1,0 +1,97 @@
+/** @format */
+
+.program {
+  padding: 120px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.container,
+.container2 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.container h2 {
+  margin: 0;
+  font-size: 45px;
+  color: var(--color-forward);
+  font-family: var(--font-inter);
+  font-weight: 600;
+  text-align: center;
+}
+
+.container > span {
+  font-size: 24px;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+  font-weight: 400;
+  text-align: justify;
+}
+
+.container div,
+.container2 div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.container div span,
+.container2 div span {
+  font-size: 24px;
+  color: var(--color-forward);
+  font-family: var(--font-inter);
+  font-weight: 600;
+}
+
+.container div p,
+.container2 div p {
+  font-size: 24px;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+  font-weight: 400;
+  text-align: justify;
+  margin: 0;
+}
+
+.mobileImage {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .program {
+    padding: 60px 24px 0;
+  }
+
+  .container h2 {
+    font-size: 24px;
+  }
+
+  .container div p,
+  .container span,
+  .container div span,
+  .container2 div p,
+  .container2 div span {
+    font-size: 16px;
+  }
+
+  .container2 div span {
+    text-align: center;
+  }
+
+  .desktopImage {
+    display: none;
+  }
+
+  .mobileImage {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .program {
+    padding: 60px 24px 0;
+  }
+}

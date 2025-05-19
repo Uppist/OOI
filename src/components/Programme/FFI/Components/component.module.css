@@ -7,7 +7,7 @@
   gap: 90px;
 }
 
-.component:nth-child(even) {
+.component:nth-of-type(even) {
   flex-direction: row-reverse;
 }
 
@@ -21,10 +21,6 @@
   display: flex;
   align-items: center;
   gap: 40px;
-}
-
-.container:nth-child(even) {
-  flex-direction: row-reverse;
 }
 
 .text {

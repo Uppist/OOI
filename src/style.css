@@ -23,6 +23,8 @@ body::-webkit-scrollbar {
   --color-background: hsla(0, 0%, 12%, 1);
   --color-health: hsla(219, 79%, 66%, 1);
   --color-forward: hsla(218, 48%, 30%, 1);
+  --color-gero: hsla(90, 37%, 50%, 1);
+  --color-bloom: hsla(263, 100%, 66%, 1);
 
   /* Fonts */
   --font-inter: "Inter";

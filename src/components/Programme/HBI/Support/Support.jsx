@@ -1,26 +1,28 @@
 /** @format */
 
 import React from "react";
-import styles from "./child.module.css";
-import child from "../../../../assets/Programme/OFF/child.png";
+import styles from "./support.module.css";
 import logo1 from "../../../../assets/Programme/HIP/back.svg";
 
-export default function Child() {
+import support from "../../../../assets/Programme/HBI/image7.png";
+
+export default function Support() {
   return (
     <div className={styles.button}>
+      {" "}
       <div className={styles.child}>
         <div>
           <h2>
-            Give Every Child Access to <span>Quality Education.</span>
+            Heal Minds,
+            <span>Restore Hope!</span>
           </h2>
           <p>
-            If you would like to gift the OFF with a sizable donation, kindly
-            reach out to us via email <b>off@octoberorange.org.</b>
+            If you would like to gift HBI with a sizable donation, kindly reach
+            out to us via email at <b>hbi@octoberorange.org.</b>
           </p>
         </div>
-        <img src={child} alt='' />
+        <img src={support} alt='' />
       </div>
-
       <button>
         {" "}
         <img src={logo1} alt='' />

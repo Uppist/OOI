@@ -18,6 +18,8 @@ import Hip from "./components/Programme/HIP/Hip";
 import Off from "./components/Programme/OFF/Off";
 import DonateHip from "./components/Donate/DonateHip";
 import FFI from "./components/Programme/FFI/FFI";
+import Tgp from "./components/Programme/TGP/Tgp";
+import Hbi from "./components/Programme/HBI/Hbi";
 
 export default function App() {
   return (
@@ -32,6 +34,8 @@ export default function App() {
           <Route path='/health-impact-programme' element={<Hip />} />
           <Route path='/october-future-fund' element={<Off />} />
           <Route path='/future-forward-initiative' element={<FFI />} />
+          <Route path='/the-gero-programme' element={<Tgp />} />
+          <Route path='/haven-bloom-initiative' element={<Hbi />} />
 
           <Route path='/givengo' element={<Givengo />} />
 

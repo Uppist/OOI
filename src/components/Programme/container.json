@@ -28,6 +28,7 @@
   {
     "logo": "logo4.svg",
     "title": "Health",
+    "link": "/the-gero-programme",
     "donate": "/donate-to-tgp",
 
     "button": "View Programme",
@@ -36,6 +37,7 @@
   {
     "logo": "logo5.svg",
     "title": "Health",
+    "link": "/haven-bloom-initiative",
     "donate": "/donate-to-hbi",
 
     "button": "View Programme",
