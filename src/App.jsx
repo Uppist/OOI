@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 import AboutUs from "./components/About/AboutUs";
 import Programme from "./components/Programme/Programme";
 import Givengo from "./components/Givengo/Givengo";
@@ -25,7 +25,7 @@ import DD from "./components/Programme/DD/DD";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div>
         <NavBar />
         <Routes>
@@ -67,6 +67,6 @@ export default function App() {
         {/* <Givengo /> */}
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
