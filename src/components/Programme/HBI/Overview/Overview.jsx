@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import styles from "./style.module.css";
-import image1 from "../../../../assets/Programme/TGP/image1.png";
+import image1 from "../../../../assets/Programme/HBI/image1.png";
 
 export default function Overview() {
   useEffect(() => {

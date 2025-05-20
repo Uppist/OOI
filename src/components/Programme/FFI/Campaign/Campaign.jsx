@@ -41,7 +41,7 @@ export default function Campaign() {
             nation's progress.
           </p>
           <button>
-            <Link to='/donate-to-hip'>Donate to FFI</Link>
+            <Link to='/donate-to-ffi'>Donate to FFI</Link>
           </button>
         </div>
       </div>

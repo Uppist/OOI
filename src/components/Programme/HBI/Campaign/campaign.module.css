@@ -63,6 +63,24 @@
   cursor: pointer;
 }
 
+.container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  font-size: 24px;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  color: var(--color-text);
+  text-align: justify;
+}
+
+.container ul li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
 @media only screen and (max-width: 768px) {
   .campaign {
     padding: 60px 24px;
@@ -72,9 +90,19 @@
     gap: 24px;
   }
 
-  .container img {
+  .container > img {
     width: 312px;
-    order: -1;
+    /* order: -1; */
+  }
+
+  .container ul {
+    font-size: 16px;
+    padding: 0 10px;
+    margin: 0;
+  }
+
+  .container ul img {
+    width: 11px;
   }
 
   .container span,

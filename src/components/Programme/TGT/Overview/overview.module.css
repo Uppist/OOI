@@ -21,6 +21,10 @@
   gap: 16px;
 }
 
+.text {
+  display: flex;
+}
+
 .text span {
   font-size: 24px;
   font-weight: 600;
@@ -34,14 +38,14 @@
 
 .text hr {
   width: 60px;
-  border: 1px solid var(--color-orange);
+  border: 1px solid var(--color-trybe);
 }
 
 .container h2 {
   margin: 0;
   font-size: 45px;
   font-weight: 700;
-  color: var(--color-orange);
+  color: var(--color-trybe);
   font-family: var(--font-inter);
 }
 

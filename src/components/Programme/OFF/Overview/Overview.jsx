@@ -16,8 +16,9 @@ export default function Overview() {
         <div className={styles.container}>
           <div className={styles.text}>
             {" "}
-            <span>Overview</span>
-            <hr />{" "}
+            <span>
+              Overview <hr />
+            </span>
           </div>
           <h2>October Future Fund (OFF)</h2>
           <div className={styles.div}>

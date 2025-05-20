@@ -20,6 +20,8 @@ import DonateHip from "./components/Donate/DonateHip";
 import FFI from "./components/Programme/FFI/FFI";
 import Tgp from "./components/Programme/TGP/Tgp";
 import Hbi from "./components/Programme/HBI/Hbi";
+import Tgt from "./components/Programme/TGT/Tgt";
+import DD from "./components/Programme/DD/DD";
 
 export default function App() {
   return (
@@ -36,6 +38,8 @@ export default function App() {
           <Route path='/future-forward-initiative' element={<FFI />} />
           <Route path='/the-gero-programme' element={<Tgp />} />
           <Route path='/haven-bloom-initiative' element={<Hbi />} />
+          <Route path='/the-giving-trybe' element={<Tgt />} />
+          <Route path='/donation-drive' element={<DD />} />
 
           <Route path='/givengo' element={<Givengo />} />
 

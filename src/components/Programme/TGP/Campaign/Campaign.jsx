@@ -27,7 +27,7 @@ export default function Campaign() {
           </p>
 
           <button>
-            <Link to='/donate-to-hip'>Donate to TGP</Link>
+            <Link to='/donate-to-tgp'>Donate to TGP</Link>
           </button>
         </div>
       </div>

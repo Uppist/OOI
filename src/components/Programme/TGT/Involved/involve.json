@@ -1,0 +1,22 @@
+[
+  {
+    "img": "image1.png",
+    "span": "Donate to a nonprofit organisation of your choice:",
+    "text": " Browse through our list of verified nonprofit organisations and find one that you are passionate about. Make a one-time donation or set up a recurring donation.",
+    "button": "Donate",
+    "link": "/donate-to-tgt"
+  },
+  {
+    "img": "image2.png",
+    "span": "Share The Giving Trybe with your friends and family: ",
+    "text": "Encourage your friends and family to donate to Nigerian nonprofit organisations through TGT. Share our platform on social media or send them an email.",
+    "button": "Share"
+  },
+  {
+    "img": "image3.png",
+    "span": "Suggest a nonprofit: ",
+    "text": "Do you know of a Nigerian nonprofit organisation that is doing great work? Suggest them to be profiled on TGT. We are always looking for new and innovative organisations to support.",
+    "button": "Refer",
+    "link": "/refer"
+  }
+]

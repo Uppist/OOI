@@ -1,12 +1,15 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./style.module.css";
 import image1 from "../../assets/Engage/refer1.png";
 import image2 from "../../assets/Engage/refer2.png";
 import image11 from "../../assets/Aboutus/image11.png";
 
 export default function Refer() {
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <>
       <div className={styles.refer}>

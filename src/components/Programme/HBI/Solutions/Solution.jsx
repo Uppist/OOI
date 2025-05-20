@@ -3,17 +3,15 @@
 import React from "react";
 import solution from "./solution.json";
 import styles from "./solution.module.css";
-import image3 from "../../../../assets/Programme/TGP/image3.png";
-import image4 from "../../../../assets/Programme/TGP/image4.png";
-import image5 from "../../../../assets/Programme/TGP/image5.png";
-import image6 from "../../../../assets/Programme/TGP/image6.png";
-import check from "../../../../assets/Programme/TGP/check_circle.svg";
+import image3 from "../../../../assets/Programme/HBI/image3.png";
+import image4 from "../../../../assets/Programme/HBI/image4.png";
+import image5 from "../../../../assets/Programme/HBI/image5.png";
+import check from "../../../../assets/Programme/HBI/check_circle.svg";
 export default function Solution() {
   const Image = {
     "image1.png": image3,
     "image2.png": image4,
     "image3.png": image5,
-    "image4.png": image6,
   };
   return (
     <div className={styles.solution}>

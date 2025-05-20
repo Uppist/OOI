@@ -21,6 +21,10 @@
   gap: 16px;
 }
 
+.text {
+  display: flex;
+}
+
 .text span {
   font-size: 24px;
   font-weight: 600;

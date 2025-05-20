@@ -30,15 +30,20 @@
   gap: 16px;
 }
 
-.text {
-  display: flex;
-}
-
 .text span {
   font-size: 24px;
   font-weight: 600;
   color: var(--color-text);
   font-family: var(--font-inter);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  width: fit-content;
+}
+
+.text hr {
+  width: 60px;
+  border: 1px solid var(--color-bloom);
 }
 
 .container h2,
@@ -101,6 +106,10 @@
 
   .text span {
     font-size: 16px;
+  }
+
+  .text hr {
+    width: 30px;
   }
 
   .container h2 {

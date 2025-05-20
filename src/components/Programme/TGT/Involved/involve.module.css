@@ -1,0 +1,118 @@
+/** @format */
+
+.involve {
+  padding: 120px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.container h2 {
+  font-size: 45px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-trybe);
+  font-family: var(--font-inter);
+}
+
+.container p {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 400;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background-color: white;
+  box-shadow: 0px 10px 25px hsla(220, 17%, 17%, 0.08);
+  padding: 0 0 20px;
+}
+
+.text img {
+  width: -webkit-fill-available;
+}
+
+.text span,
+.text p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text2);
+  font-family: var(--font-inter);
+  text-align: justify;
+}
+.text p {
+  font-weight: 600;
+  padding: 0 20px;
+}
+
+/* .text div {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+} */
+
+.text button,
+.involve button {
+  margin-top: 30px;
+  padding: 12px 60px;
+  font-family: var(--font-inter);
+  background-color: transparent;
+  color: var(--color-trybe);
+  border: 1px solid var(--color-trybe);
+  font-weight: 500;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media only screen and (max-width: 768px) {
+  .involve {
+    padding: 60px 24px 0;
+  }
+
+  .container2 {
+    flex-direction: column;
+  }
+  .container h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .container p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .text p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .text span {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+}

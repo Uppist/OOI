@@ -39,6 +39,15 @@
   font-weight: 600;
   color: var(--color-text);
   font-family: var(--font-inter);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  width: fit-content;
+}
+
+.text hr {
+  width: 60px;
+  border: 1px solid var(--color-gero);
 }
 
 .container h2,
@@ -84,6 +93,10 @@
   }
   .p {
     flex-direction: column;
+  }
+
+  .text hr {
+    width: 30px;
   }
 
   .p2 {
