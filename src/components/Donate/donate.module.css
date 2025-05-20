@@ -61,7 +61,7 @@
 }
 
 .amount > div button:hover {
-  color: var(--color-primary);
+  color: var(--color-primary) !important;
   background-color: var(--color-health);
 }
 
