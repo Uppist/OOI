@@ -8,7 +8,7 @@ import axios from "axios";
 import down from "../../assets/Donate/down.svg";
 
 import { useLocation } from "react-router-dom";
-import InputField from "./inputField";
+import InputField from "./Input";
 import DonationButton from "./DonationButton";
 
 export default function DonateHip() {
