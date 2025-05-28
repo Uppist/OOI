@@ -22,7 +22,7 @@ export default function MobileNav({ isSidebarVisible, onClose, logo }) {
     >
       <div className={styles.imageclose}>
         <Link
-          to='/OOI'
+          to='/'
           onClick={() => {
             onClose();
           }}
@@ -49,7 +49,7 @@ export default function MobileNav({ isSidebarVisible, onClose, logo }) {
       </div>
 
       <ul className={styles.sidebarmenu}>
-        <Link to='/OOI'>
+        <Link to='/'>
           <li
             className={styles.sidebarlist}
             onClick={() => {

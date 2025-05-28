@@ -5,6 +5,7 @@ import styles from "./future.module.css";
 import logo1 from "../../../../assets/Programme/HIP/back.svg";
 
 import future from "../../../../assets/Programme/FFI/future.png";
+import { Link } from "react-router-dom";
 
 export default function Future() {
   return (
@@ -24,8 +25,10 @@ export default function Future() {
       </div>
       <button>
         {" "}
-        <img src={logo1} alt='' />
-        Back
+        <Link to='/programme'>
+          <img src={logo1} alt='' />
+          Back
+        </Link>
       </button>
     </div>
   );

@@ -48,8 +48,10 @@ export default function Involve() {
         </p>
       </div>
       <button>
-        <img src={back} alt='' />
-        Back
+        <Link to='/programme'>
+          <img src={back} alt='' />
+          Back
+        </Link>
       </button>
     </div>
   );

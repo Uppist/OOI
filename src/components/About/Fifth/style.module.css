@@ -104,4 +104,14 @@
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .fifth {
+    flex-direction: column;
+    padding: 60px 24px 0;
+    gap: 100px;
+  }
+  .container,
+  .button {
+    text-align: center;
+    align-items: center;
+  }
 }

@@ -69,4 +69,7 @@
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .newsroom {
+    padding: 60px 24px;
+  }
 }

@@ -10,7 +10,7 @@ export default function Buttons() {
     <div className={styles.buttons}>
       <button>
         <img src={logo1} alt='' />
-        <Link to='/OOI'>About Us</Link>
+        <Link to='/'>About Us</Link>
       </button>
       <button>
         <img src={logo2} alt='' />

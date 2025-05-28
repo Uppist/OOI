@@ -124,4 +124,16 @@
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .partner {
+    padding: 60px 24px;
+    gap: 70px;
+  }
+
+  .container2 {
+    gap: 25px;
+  }
+
+  .container2 span {
+    padding: 30px;
+  }
 }

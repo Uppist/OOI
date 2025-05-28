@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./child.module.css";
 import child from "../../../../assets/Programme/OFF/child.png";
 import logo1 from "../../../../assets/Programme/HIP/back.svg";
+import { Link } from "react-router-dom";
 
 export default function Child() {
   return (
@@ -22,9 +23,11 @@ export default function Child() {
       </div>
 
       <button>
-        {" "}
-        <img src={logo1} alt='' />
-        Back
+        <Link to='/programme'>
+          {" "}
+          <img src={logo1} alt='' />
+          Back
+        </Link>
       </button>
     </div>
   );

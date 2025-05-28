@@ -1,26 +1,44 @@
 [
   {
-    "image": "logo1.png",
-    "title": "Health Impact Programme (HIP)"
-  },
-  {
-    "image": "logo2.png",
-    "title": "October Future Fund (OFF)"
-  },
-  {
-    "image": "logo3.png",
-    "title": "Future Forward Initiative (FFI)"
-  },
-  {
-    "image": "logo4.png",
-    "title": "The Gero Programme (TGP)"
-  },
-  {
-    "image": "logo5.png",
-    "title": "Haven Bloom Initiative (HBI)"
-  },
-  {
-    "image": "logo6.png",
-    "title": "The Giving Trybe (TGT)"
+    "/donate-to-hip": {
+      "title": "Health Impact Programme (HIP)",
+      "logo": "logo.png",
+      "color": "hsla(219, 79%, 66%, 1)",
+      "code": "ACCT_subrum4v715cle9",
+      "reference": "OOHIP"
+    },
+    "/donate-to-off": {
+      "title": "October Future Fund (OFF)",
+      "logo": "logo2.png",
+      "color": "hsla(12, 100%, 60%, 1)",
+      "code": "ACCT_k594woq1yw5of7b",
+      "reference": "OOOFF"
+    },
+    "/donate-to-ffi": {
+      "title": "Future Forward Initiative (FFI)",
+      "logo": "logo3.png",
+      "color": "hsla(218, 48%, 30%, 1)",
+      "code": "ACCT_nvhybe3bqsket3k",
+      "reference": "OOFFI"
+    },
+    "/donate-to-tgp": {
+      "title": "The Gero Programme (TGP)",
+      "logo": "logo4.png",
+      "color": "hsla(90, 37%, 50%, 1)",
+      "code": "ACCT_a9plyz224kkhcxb",
+      "reference": "OOTGP"
+    },
+    "/donate-to-hbi": {
+      "title": "Haven Bloom Initiative (HBI)",
+      "logo": "logo5.png",
+      "color": "hsla(263, 100%, 66%, 1)",
+      "code": "ACCT_7ft4o8islw3daki",
+      "reference": "OOHBI"
+    },
+    "/donate-to-tgt": {
+      "title": "The Giving Trybe (TGT)",
+      "logo": "logo6.png",
+      "color": "hsla(345, 81%, 75%, 1)"
+    }
   }
 ]

@@ -108,4 +108,12 @@
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .third {
+    padding: 60px 24px;
+  }
+  .image,
+  .image:nth-of-type(even) {
+    flex-direction: column !important;
+    gap: 0;
+  }
 }

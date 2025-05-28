@@ -51,9 +51,10 @@
 .gridContainer {
   padding: 0 120px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 50px;
+  place-items: center;
   /* margin-top: 50px; */
 }
 
@@ -264,7 +265,7 @@ hr {
 
   .gridContainer {
     padding: 0;
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     place-items: center;
   }
   .buttons {
@@ -283,4 +284,12 @@ hr {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .programme {
+    margin-top: 0px;
+    padding: 60px 24px;
+  }
+
+  .gridContainer {
+    padding: 0px 24px;
+  }
 }

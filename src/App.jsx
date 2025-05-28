@@ -29,7 +29,7 @@ export default function App() {
       <div>
         <NavBar />
         <Routes>
-          <Route path='/OOI' element={<AboutUs />} />
+          <Route path='/' element={<AboutUs />} />
           {/* <Route path='/about' element={<AboutUs />} /> */}
           <Route path='/programme' element={<Programme />} />
           {/*Route for different programmes */}

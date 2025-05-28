@@ -5,6 +5,7 @@ import styles from "./support.module.css";
 import logo1 from "../../../../assets/Programme/HIP/back.svg";
 
 import support from "../../../../assets/Programme/TGP/image8.png";
+import { Link } from "react-router-dom";
 
 export default function Support() {
   return (
@@ -24,8 +25,10 @@ export default function Support() {
       </div>
       <button>
         {" "}
-        <img src={logo1} alt='' />
-        Back
+        <Link to='/programme'>
+          <img src={logo1} alt='' />
+          Back
+        </Link>
       </button>
     </div>
   );

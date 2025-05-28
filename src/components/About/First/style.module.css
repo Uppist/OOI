@@ -6,6 +6,7 @@
 }
 .firstSection > img {
   filter: brightness(20%);
+  width: 100%;
 }
 
 .textContainer {
@@ -75,4 +76,7 @@
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .firstSection {
+    margin-top: 60px;
+  }
 }

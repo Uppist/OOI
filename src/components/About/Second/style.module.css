@@ -201,4 +201,61 @@
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .philosophies {
+    padding: 60px 24px;
+  }
+  .container {
+    padding: 60px 24px;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 150px;
+  }
+
+  .textwe {
+    gap: 0;
+    align-items: center;
+    margin-top: -135px;
+  }
+
+  .textwe label {
+    position: relative;
+    top: -720px;
+    text-align: center;
+  }
+
+  .textwe h2 {
+    position: relative;
+    top: -725px;
+    text-align: center;
+  }
+
+  .textphil {
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .text {
+    gap: 0;
+    margin-top: -150px;
+  }
+
+  .text h2 {
+    position: relative;
+    top: -500px;
+    text-align: center;
+  }
+
+  .mission p,
+  .p > p,
+  .philosophies p {
+    text-align: justify;
+  }
+
+  .p {
+    margin-top: 10px !important;
+  }
+
+  .textphil img {
+    margin: 0 auto;
+  }
 }

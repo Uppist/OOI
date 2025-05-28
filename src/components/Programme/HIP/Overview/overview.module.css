@@ -24,7 +24,7 @@
   color: var(--color-text);
   font-family: var(--font-inter);
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
   width: fit-content;
 }

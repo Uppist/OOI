@@ -51,4 +51,14 @@
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .sustainability {
+    padding: 60px 24px;
+  }
+  .text h2 {
+    text-align: center;
+  }
+
+  .text span {
+    text-align: justify;
+  }
 }

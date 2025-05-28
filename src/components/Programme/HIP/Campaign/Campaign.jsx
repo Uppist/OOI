@@ -39,9 +39,11 @@ export default function Campaign() {
       </div>
 
       <button>
-        {" "}
-        <img src={logo1} alt='' />
-        Back
+        <Link to='/programme'>
+          {" "}
+          <img src={logo1} alt='' />
+          Back
+        </Link>
       </button>
     </div>
   );

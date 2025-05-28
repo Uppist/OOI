@@ -22,6 +22,10 @@
   padding: 23px 50px 23px 100px;
 }
 
+.nav img {
+  width: 176px;
+}
+
 .navul {
   display: flex;
   align-items: center;
@@ -193,7 +197,7 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1250px) {
   .nav {
-    padding: 0px 20px;
+    padding: 20px;
   }
 
   .navul {

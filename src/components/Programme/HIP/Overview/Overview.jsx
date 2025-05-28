@@ -14,8 +14,9 @@ export default function Overview() {
       <div className={styles.container}>
         <div className={styles.text}>
           {" "}
-          <span>Overview</span>
-          <hr />{" "}
+          <span>
+            Overview <hr />
+          </span>{" "}
         </div>
         <h2>Health Impact Programme (HIP)</h2>
         <p>

@@ -4,13 +4,35 @@ import React, { use, useState } from "react";
 import styles from "./NavBar.module.css";
 import Logo from "../../assets/logo.svg";
 import GivengoLogo from "../../assets/Givengo/givengo.svg";
+import LogoHip from "../../assets/Logo/hip.png";
+import LogoOff from "../../assets/Logo/off.png";
+import LogoFfi from "../../assets/Logo/ffi.png";
+import LogoTgp from "../../assets/Logo/tgp.png";
+import LogoHbi from "../../assets/Logo/hbi.png";
+import LogoTgt from "../../assets/Logo/tgt.png";
 import { Link, useLocation } from "react-router-dom";
 import MobileNav from "./MobileNav";
 
 export default function NavBar() {
   const location = useLocation();
 
-  const logo = location.pathname === "/givengo" ? GivengoLogo : Logo;
+  const LogoMap = {
+    "/givengo": GivengoLogo,
+    "/health-impact-programme": LogoHip,
+    "/october-future-fund": LogoOff,
+    "/future-forward-initiative": LogoFfi,
+    "/the-gero-programme": LogoTgp,
+    "/haven-bloom-initiative": LogoHbi,
+    "/the-giving-tree": LogoTgt,
+    "/donate-to-hip": GivengoLogo,
+    "/donate-to-off": GivengoLogo,
+    "/donate-to-ffi": GivengoLogo,
+    "/donate-to-tgp": GivengoLogo,
+    "/donate-to-hbi": GivengoLogo,
+    "/donate-to-tgt": GivengoLogo,
+  };
+
+  const logo = LogoMap[location.pathname] || Logo;
 
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
@@ -42,13 +64,13 @@ export default function NavBar() {
   return (
     <header className={styles.firstsection}>
       <nav className={styles.nav}>
-        <Link to='/OOI'>
+        <Link to='/'>
           {/* <LogoNav /> */}
           <img src={logo} alt='Logo' />
         </Link>
 
         <ul className={styles.navul}>
-          <Link to='/OOI' OOI>
+          <Link to='/' OOI>
             <li className={styles.lists}>About Us</li>
           </Link>
           <Link to='/programme'>
@@ -138,7 +160,7 @@ export default function NavBar() {
                   </Link>
                 </li>
                 <li>
-                  <Link to='' onClick={closeMedia}>
+                  <Link to='/givengo' onClick={closeMedia}>
                     Donate to OOI
                   </Link>
                 </li>
