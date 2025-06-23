@@ -49,12 +49,12 @@ export default function Philosophies() {
         an organisation, is defined by accountability, fairness and grounded
         principles.
       </p>
-      <p>
+      <p className={styles.pText}>
         We take <span>Responsibility</span> for all that we do and their
         implications on our environment, as what we seek to do is continually
         support positive change.
       </p>
-      <p>
+      <p className={styles.pText}>
         The quest for <span>Excellence</span> is at the core of what we do, how
         we do things and the continuous support we provide to our stakeholders.
         This helps ensure that all we do goes through a process leading towards

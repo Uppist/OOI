@@ -91,10 +91,12 @@
   flex-direction: column;
 }
 
-.mission span {
+.mission span,
+.p span,
+.pText span {
   font-size: 24px;
   font-weight: 600;
-  color: var(--color-orange);
+  color: var(--color-orange) !important;
   font-family: var(--font-inter);
 }
 

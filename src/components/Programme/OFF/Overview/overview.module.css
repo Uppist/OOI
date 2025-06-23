@@ -62,6 +62,12 @@
   line-height: 1.4;
 }
 
+.p2 p span {
+  font-weight: 600;
+  color: var(--color-orange);
+  cursor: pointer;
+}
+
 .container p span {
   font-weight: 600;
 }

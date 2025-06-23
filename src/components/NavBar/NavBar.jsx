@@ -50,10 +50,12 @@ export default function NavBar() {
 
   function Media() {
     setisMedia((prev) => !prev);
+    setIsEngage(false);
   }
 
   function Engage() {
     setIsEngage((prev) => !prev);
+    setisMedia(false);
   }
 
   function closeMedia() {
@@ -73,7 +75,7 @@ export default function NavBar() {
           <Link to='/' OOI>
             <li className={styles.lists}>About Us</li>
           </Link>
-          <Link to='/programme'>
+          <Link to='/programmes'>
             <li className={styles.lists}>Programmes</li>
           </Link>
 
@@ -159,11 +161,7 @@ export default function NavBar() {
                     Refer a Non-profit
                   </Link>
                 </li>
-                <li>
-                  <Link to='/givengo' onClick={closeMedia}>
-                    Donate to OOI
-                  </Link>
-                </li>
+
                 <li>
                   <Link to='/contactus' onClick={closeMedia}>
                     Contact Us{" "}

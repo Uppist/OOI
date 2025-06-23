@@ -20,7 +20,9 @@ export default function Volunteer() {
           the roles that match your interests and join our vibrant community of
           volunteers. Click below to apply and begin your journey with OOI!
         </span>
-        <button>Join Our Team!</button>
+        <button>
+          <Link to='https://forms.gle/pwdK8oEq4QMdrhd59 '>Join Our Team!</Link>
+        </button>
       </div>
       <img src={image} alt='' />
     </div>

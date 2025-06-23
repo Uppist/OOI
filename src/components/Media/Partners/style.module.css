@@ -80,6 +80,7 @@
 .container2 label {
   color: var(--color-orange);
   font-weight: 600;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {

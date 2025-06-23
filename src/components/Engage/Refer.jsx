@@ -5,6 +5,7 @@ import styles from "./style.module.css";
 import image1 from "../../assets/Engage/refer1.png";
 import image2 from "../../assets/Engage/refer2.png";
 import image11 from "../../assets/Aboutus/image11.png";
+import { Link } from "react-router-dom";
 
 export default function Refer() {
   useEffect(() => {
@@ -69,7 +70,12 @@ export default function Refer() {
           <span>
             Together we can make{""} <label>greater impact</label>
           </span>
-          <button>Refer a Nonprofit</button>
+          <button>
+            {" "}
+            <Link to='https://forms.gle/VH3ARHHKp5NDFaT39'>
+              Refer a Nonprofit
+            </Link>
+          </button>
         </div>
 
         <img src={image11} alt='' />

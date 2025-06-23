@@ -34,9 +34,8 @@
   font-size: 18px;
   font-weight: 500;
   font-family: var(--font-inter);
-  padding: 0s;
+  padding: 0px;
   color: var(--color-text);
-  cursor: pointer;
 }
 
 .navul a {
@@ -47,6 +46,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  cursor: pointer;
 }
 .media {
   position: absolute;

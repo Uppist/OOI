@@ -19,16 +19,23 @@ export default function OurPartners() {
     "logo5.svg": logo5,
     "logo6.svg": logo6,
   };
+
+  function handleClick(url) {
+    window.open(url, "_blank", "noopener, noreferrer");
+  }
   return (
     <div className={styles.partners}>
       <h2>Our Partners</h2>
       <div className={styles.container}>
         {partner.map((data, index) => (
-          <div className={styles.container2}>
+          <div className={styles.container2} key={index}>
             <img src={Logo[data.logo]} alt='' />
             <hr />
             <span>
-              {data.text} <label htmlFor=''>Visit {data.name}</label>
+              {data.text}{" "}
+              <label htmlFor='' onClick={() => handleClick(data.link)}>
+                Visit {data.name}
+              </label>
             </span>
           </div>
         ))}

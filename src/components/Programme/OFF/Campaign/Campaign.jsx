@@ -32,19 +32,17 @@ export default function Campaign() {
             </p>
             <p>
               Other key matters will cover: Sustainable Support (We would not
-              spend all the funds at once. A portion will be{" "}
+              spend all the funds at once. A portion will be invested with a
+              professional advisor to ensure we can continue supporting our
+              sponsored children through- out their education); and Expanding
+              our Reach (Every Naira raised above our initial target will allow
+              us to sponsor even more children each year, creating a lasting
+              impact on the lives of young people in Nigeria).
             </p>
           </div>
         </div>
       </div>
       <div className={styles.p}>
-        <p>
-          invested with a professional advisor to ensure we can continue
-          supporting our sponsored children through- out their education); and
-          Expanding our Reach (Every Naira raised above our initial target will
-          allow us to sponsor even more children each year, creating a lasting
-          impact on the lives of young people in Nigeria).
-        </p>
         <p>
           By combining immediate action with long-term financial planning, OFF
           aims to make a significant contribution to reducing the number of

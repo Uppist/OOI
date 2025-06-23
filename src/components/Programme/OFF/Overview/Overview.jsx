@@ -3,8 +3,12 @@
 import React, { useEffect } from "react";
 import styles from "./overview.module.css";
 import overview from "../../../../assets/Programme/OFF/overview.png";
+import { Link } from "react-router-dom";
 
 export default function Overview() {
+  function handleUNI(item) {
+    window.open(item);
+  }
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -47,19 +51,34 @@ export default function Overview() {
           childhood education. In the north of the country, the picture is even
           bleaker, with a net attendance rate of 53 percent. Getting
           out-of-school children back into education poses a massive challenge.”
-          - Culled from UNICEF. But when you move towards the North, "gender,
-          like geography and poverty, is an important factor in the pattern of
-          educational marginalisation. States in the north-east and north-west
-          have female primary net attendance rates of 47.7 percent and 47,3
-          percent, respectively, meaning that more than half of the girls are
-          not in school." - Culled from UNICEF. Thus, this will influence OOI’s
+          - Culled from{" "}
+          <span
+            onClick={() =>
+              handleUNI(" https://www.unicef.org/nigeria/education ")
+            }
+          >
+            UNICEF
+          </span>
+          . But when you move towards the North, "gender, like geography and
+          poverty, is an important factor in the pattern of educational
+          marginalisation. States in the north-east and north-west have female
+          primary net attendance rates of 47.7 percent and 47,3 percent,
+          respectively, meaning that more than half of the girls are not in
+          school." - Culled from UNICEF. Thus, this will influence OOI’s
           operational factors in delivering on the ideals of the programme,
           especially in educating the primary target audience of this programme.
         </p>
         <p>
           The intention with OFF contributes to the United Nations’ Sustainable
-          Development Goals (SDGs) - Goal 4 - which eventually leads to meeting
-          the ideals of - Goal 10.
+          Development Goals (SDGs) -{" "}
+          <span onClick={() => handleUNI("https://sdgs.un.org/goals/goal4  ")}>
+            Goal 4
+          </span>{" "}
+          - which eventually leads to meeting the ideals of -{" "}
+          <span onClick={() => handleUNI("https://sdgs.un.org/goals/goal10")}>
+            Goal 10
+          </span>
+          .
         </p>
       </div>
     </div>

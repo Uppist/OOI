@@ -30,7 +30,7 @@ export default function Areas() {
             <img src={Image[data.img]} alt='' />
             <div>
               <span>{data.span}</span>
-              <p>{data.p}</p>
+              <p dangerouslySetInnerHTML={{ __html: data.p }}></p>
             </div>
           </div>
         ))}

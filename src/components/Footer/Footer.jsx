@@ -114,7 +114,7 @@ export default function Footer() {
           <label>Quick Links</label>
 
           <ul>
-            <Link to='/programme'>
+            <Link to='/programmes'>
               <li>Programmes</li>
             </Link>
             <Link to='/givengo'>
@@ -138,7 +138,11 @@ export default function Footer() {
         <div className={styles.quicks}>
           <label htmlFor=''>Policies</label>
           <ul>
-            <li>Privacy Policy</li>
+            <li>
+              <Link to='https://drive.google.com/file/d/1Ev9L9EcLscH9ZfUoFPqIRd6WwYWi0GYP/view?usp=drive_link'>
+                Privacy Policy
+              </Link>
+            </li>
             <li>Terms of Use</li>
           </ul>
         </div>

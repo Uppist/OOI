@@ -34,27 +34,25 @@ export default function Operations() {
               schools that meet our quality and budget criteria to ensure
               students receive a strong educational foundation.
             </li>
+
+            <li>
+              {" "}
+              <img src={check} alt='' /> {"  "}
+              <span>Performance Tracking:</span> We will track academic
+              performance and other relevant metrics, recognising and showcasing
+              high-achieving students.
+            </li>
+            <li>
+              {" "}
+              <img src={check} alt='' /> {"  "}
+              <span>Enrichment Activities:</span> We will organise participation
+              in educational competitions to foster growth and development.
+            </li>
           </ul>
         </div>
         <img src={operation} alt='' />
       </div>
       <div className={styles.ul}>
-        <ul>
-          <li>
-            {" "}
-            <img src={check} alt='' /> {"  "}
-            <span>Performance Tracking:</span> We will track academic
-            performance and other relevant metrics, recognising and showcasing
-            high-achieving students.
-          </li>
-          <li>
-            {" "}
-            <img src={check} alt='' /> {"  "}
-            <span>Enrichment Activities:</span> We will organise participation
-            in educational competitions to foster growth and development.
-          </li>
-        </ul>
-
         <span>Operational Excellence:</span>
 
         <ul>

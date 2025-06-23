@@ -2,11 +2,19 @@
 
 import React, { useEffect } from "react";
 import styles from "../Newsroom/newsroom.module.css";
+import image from "../../../assets/report.png";
+import arrow from "../../../assets/arrow-up.svg";
 
 export default function Reports() {
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
+
+  function handleOpen() {
+    window.open(
+      "https://drive.google.com/file/d/1EptQh6hzQglPD2Wl3kBRU3n_Yk5aZcYa/view"
+    );
+  }
   return (
     <div className={styles.newsroom}>
       <h2>Featured Reports</h2>
@@ -39,8 +47,21 @@ export default function Reports() {
           </li>
         </ul>
       </div>{" "}
-      <div>
-        <img src='' alt='' />
+      <div className={styles.report}>
+        <img src={image} alt='' />
+        <label htmlFor=''>Annual Impact Reports</label>
+        <div>
+          <span>25 February 2025</span>
+          <div className={styles.h3}>
+            <h3>OOI Impact Report (2015-2024)</h3>
+            <img src={arrow} alt='' onClick={handleOpen} />
+          </div>
+          <p>
+            OOI’s inaugural Impact Report, covering the period from 2015 to
+            2024. This report reflects our commitment to transparency and
+            accountability, showcasing the journey...
+          </p>
+        </div>
       </div>
     </div>
   );

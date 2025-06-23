@@ -7,10 +7,6 @@
   gap: 90px;
 }
 
-.component:nth-of-type(even) {
-  flex-direction: row-reverse;
-}
-
 .div {
   display: flex;
   flex-direction: column;
@@ -21,6 +17,10 @@
   display: flex;
   align-items: center;
   gap: 40px;
+}
+
+.component .div:nth-child(even) .container {
+  flex-direction: row-reverse;
 }
 
 .text {

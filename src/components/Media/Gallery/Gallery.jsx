@@ -2,6 +2,8 @@
 
 import React, { useEffect } from "react";
 import styles from "../Newsroom/newsroom.module.css";
+import gallery from "../../../assets/Media/gallery.png";
+import { Carousel } from "react-responsive-carousel";
 
 export default function Gallery() {
   useEffect(() => {
@@ -19,9 +21,17 @@ export default function Gallery() {
           work.
         </p>
       </div>{" "}
-      <div>
-        <img src='' alt='' />
-      </div>
+      <Carousel>
+        {" "}
+        <div className={styles.gallery}>
+          <img src={gallery} alt='' />
+
+          <div>
+            <span>OOI Gallery 2015-2024</span>
+            <button>See More</button>
+          </div>
+        </div>
+      </Carousel>
     </div>
   );
 }

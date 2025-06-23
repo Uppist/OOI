@@ -3,6 +3,7 @@
 import React from "react";
 import image11 from "../../../assets/Aboutus/image11.png";
 import styles from "./style.module.css";
+import { Link } from "react-router-dom";
 
 export default function Fifth() {
   return (
@@ -14,11 +15,15 @@ export default function Fifth() {
         <div className={styles.buttons}>
           <div className={styles.button}>
             <span>If you would like to reach out to us,</span>
-            <button>Get In Touch</button>
+            <button>
+              <Link to='/contactus'>Get In Touch</Link>
+            </button>
           </div>
           <div className={styles.button}>
             <span>If you would like to learn about our initiatives,</span>
-            <button>See Programmes</button>
+            <button>
+              <Link to='/programmes'>See Programmes</Link>
+            </button>
           </div>
         </div>
       </div>

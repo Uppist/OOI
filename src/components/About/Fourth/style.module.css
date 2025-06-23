@@ -32,6 +32,7 @@
   color: var(--color-text);
   font-family: var(--font-inter);
   text-align: justify;
+  margin-top: 20px;
 }
 
 .content ul {

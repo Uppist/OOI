@@ -3,7 +3,13 @@
 import React, { useEffect } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  HashRouter,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import AboutUs from "./components/About/AboutUs";
 import Programme from "./components/Programme/Programme";
 import Givengo from "./components/Givengo/Givengo";
@@ -22,16 +28,26 @@ import Tgp from "./components/Programme/TGP/Tgp";
 import Hbi from "./components/Programme/HBI/Hbi";
 import Tgt from "./components/Programme/TGT/Tgt";
 import DD from "./components/Programme/DD/DD";
+import Login from "./components/Admin/Login/Login";
+import Dashboard from "./components/Admin/Dashboard/Dashboard";
 
 export default function App() {
+  const location = useLocation();
+
+  const adminRoute = ["/login", "/dashboard"];
+
+  const isAdminRoute = adminRoute.includes(location.pathname);
+
   return (
-    <HashRouter>
+    <>
+      {" "}
       <div>
-        <NavBar />
+        {!isAdminRoute && <NavBar />}
+
         <Routes>
           <Route path='/' element={<AboutUs />} />
           {/* <Route path='/about' element={<AboutUs />} /> */}
-          <Route path='/programme' element={<Programme />} />
+          <Route path='/programmes' element={<Programme />} />
           {/*Route for different programmes */}
           <Route path='/health-impact-programme' element={<Hip />} />
           <Route path='/october-future-fund' element={<Off />} />
@@ -61,12 +77,16 @@ export default function App() {
           <Route path='/volunteer' element={<Volunteer />} />
           <Route path='/refer' element={<Refer />} />
           <Route path='/contactus' element={<Contact />} />
+
+          {/*Route path for Admin Dashboard */}
+          <Route path='/login' element={<Login />} />
+          <Route path='/dashboard' element={<Dashboard />} />
         </Routes>
         {/* <AboutUs /> */}
         {/* <Programme /> */}
         {/* <Givengo /> */}
-        <Footer />
+        {!isAdminRoute && <Footer />}
       </div>
-    </HashRouter>
+    </>
   );
 }
