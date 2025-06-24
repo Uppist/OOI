@@ -143,7 +143,11 @@ export default function Footer() {
                 Privacy Policy
               </Link>
             </li>
-            <li>Terms of Use</li>
+            <li>
+              <Link to='https://drive.google.com/file/d/1EvRFwE5kO6zS1F6a2aAn_GApQnTXZlyG/view?usp=drive_link'>
+                Terms of Use
+              </Link>
+            </li>
           </ul>
         </div>
         <div className={styles.connect}>

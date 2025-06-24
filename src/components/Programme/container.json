@@ -44,14 +44,6 @@
     "button2": "Donate"
   },
   {
-    "logo": "logo6.svg",
-    "title": "Charitable & Trust",
-    "link": "/the-giving-trybe",
-    "donate": "/donate-to-tgt",
-    "button": "View Programme",
-    "button2": "Donate"
-  },
-  {
     "logo": "logo7.svg",
     "link": "/donation-drive",
     "title": "Charitable & Trust",

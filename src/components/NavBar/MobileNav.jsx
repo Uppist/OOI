@@ -60,7 +60,7 @@ export default function MobileNav({ isSidebarVisible, onClose, logo }) {
           </li>
         </Link>
         <hr />
-        <Link to='/programme'>
+        <Link to='/programmes'>
           <li
             className={styles.sidebarlist}
             onClick={() => {

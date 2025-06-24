@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import styles from "./NavBar.module.css";
 import Logo from "../../assets/logo.svg";
 import GivengoLogo from "../../assets/Givengo/givengo.svg";
@@ -63,6 +63,24 @@ export default function NavBar() {
     setIsEngage(false);
   }
 
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        !event.target.closest(`.${styles.media}`) &&
+        !event.target.closest(`.${styles.media2}`) &&
+        !event.target.closest(`.${styles.lists}`)
+      ) {
+        closeMedia(); // Close both dropdowns
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <header className={styles.firstsection}>
       <nav className={styles.nav}>
@@ -73,14 +91,20 @@ export default function NavBar() {
 
         <ul className={styles.navul}>
           <Link to='/' OOI>
-            <li className={styles.lists}>About Us</li>
+            <li className={styles.lists} onClick={closeMedia}>
+              About Us
+            </li>
           </Link>
           <Link to='/programmes'>
-            <li className={styles.lists}>Programmes</li>
+            <li className={styles.lists} onClick={closeMedia}>
+              Programmes
+            </li>
           </Link>
 
           <Link to='/givengo'>
-            <li className={styles.lists}>Givengo </li>
+            <li className={styles.lists} onClick={closeMedia}>
+              Givengo{" "}
+            </li>
           </Link>
 
           {/* <Link to='/Articles'> */}

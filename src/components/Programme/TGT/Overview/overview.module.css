@@ -1,6 +1,10 @@
 /** @format */
 /*Styling for overview section*/
 
+.tgt {
+  display: none;
+}
+
 .overview {
   padding: 120px 80px 0 0;
   margin-top: 100px;

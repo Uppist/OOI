@@ -18,7 +18,7 @@ export default function GridContainer() {
     "logo3.svg": logo3,
     "logo4.svg": logo4,
     "logo5.svg": logo5,
-    "logo6.svg": logo6,
+    // "logo6.svg": logo6,
     "logo7.svg": logo7,
   };
 
