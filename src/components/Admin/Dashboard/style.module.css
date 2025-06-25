@@ -1,5 +1,8 @@
 /** @format */
 
+.mobileDashboard {
+  display: none;
+}
 .nav {
   position: absolute;
   left: 314px;
@@ -10,6 +13,9 @@
   color: hsla(0, 0%, 17%, 0.8);
   background-color: white;
   font-family: var(--font-inter);
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .sidebar {
@@ -65,13 +71,17 @@
   cursor: pointer;
 }
 
-.dashboard {
+.content {
   position: absolute;
   left: 323px;
   width: -webkit-fill-available;
   top: 80px;
   background-color: hsla(0, 0%, 96%, 1);
   padding: 24px;
+}
+
+.content > span {
+  display: none;
 }
 
 .revenue {
@@ -143,4 +153,42 @@
   background-color: transparent;
   font-family: var(--font-inter);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .dashboard {
+    display: none;
+  }
+
+  .mobileDashboard {
+    display: block;
+  }
+
+  /*Content.jsx*/
+
+  .content {
+    left: 0;
+    padding: 50px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .content > span {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: var(--font-inter);
+    color: hsla(0, 0%, 17%, 0.8);
+  }
+  .programmeRevenue {
+    grid-template-columns: 1fr;
+  }
+
+  .revenue {
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
 }

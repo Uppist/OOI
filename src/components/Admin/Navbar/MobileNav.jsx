@@ -5,18 +5,55 @@ import styles from "./style.module.css";
 import giveno from "../../../assets/Givengo/givengo.svg";
 import { Link } from "react-router-dom";
 
-export default function SideBar({ resetDashboard }) {
+export default function MobileNav({
+  resetDashboard,
+  isSidebarVisible,
+  onClose,
+}) {
   const [isActive, setIsActive] = useState(null);
-  return (
-    <div className={styles.sidebar}>
-      <img src={giveno} alt='' />
 
+  return (
+    <div
+      className={`${styles.mobilenav} ${
+        isSidebarVisible ? styles.visible : styles["fade-out"]
+      }`}
+    >
+      <div className={styles.imageclose}>
+        <Link
+          to='/'
+          onClick={() => {
+            onClose();
+          }}
+        >
+          <img src={giveno} alt='' />{" "}
+        </Link>
+        <a className='dropdown-close' onClick={onClose}>
+          <svg
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              d='M6.758 17.243L12.001 12M17.244 6.757L12 12M12 12L6.758 6.757M12.001 12L17.244 17.243'
+              stroke='#2B2B2B'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+            />
+          </svg>
+        </a>
+      </div>
       <div className={styles.div}>
         <div
           className={
             isActive === "dashboard" ? styles.active : styles.notactive
           }
-          onClick={() => setIsActive("dashboard")}
+          onClick={() => {
+            setIsActive("dashboard");
+            onClose();
+          }}
         >
           <svg
             width='20'
@@ -37,7 +74,10 @@ export default function SideBar({ resetDashboard }) {
         <hr />
         <div
           className={isActive === "logout" ? styles.active : styles.notactive}
-          onClick={() => setIsActive("logout")}
+          onClick={() => {
+            setIsActive("logout");
+            onClose();
+          }}
         >
           <svg
             width='20'

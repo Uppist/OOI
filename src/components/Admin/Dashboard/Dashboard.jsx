@@ -4,7 +4,9 @@ import React, { useState } from "react";
 import NavBar from "./NavBar";
 import SideBar from "./SideBar";
 import Content from "./Content";
+import styles from "./style.module.css";
 import Transaction from "./Transaction/Transaction";
+import MobileDashboard from "./MobileDashboard";
 
 export default function Dashboard() {
   const Programme = [
@@ -47,14 +49,28 @@ export default function Dashboard() {
     setTransactionLog(null);
   }
   return (
-    <div>
-      <NavBar title={navBarText} />
-      <SideBar resetDashboard={resetDashboard} />
-      {transactionLog !== null ? (
-        <Transaction />
-      ) : (
-        <Content handleSeeMore={handleSeeMore} Programme={Programme} />
-      )}
-    </div>
+    <>
+      <div className={styles.dashboard}>
+        <NavBar title={navBarText} resetDashboard={resetDashboard} />
+        <SideBar resetDashboard={resetDashboard} />
+        {transactionLog !== null ? (
+          <Transaction />
+        ) : (
+          <Content handleSeeMore={handleSeeMore} Programme={Programme} />
+        )}
+      </div>
+
+      {/* /*Mobile Dashboard */}
+      <div className={styles.mobileDashboard}>
+        {" "}
+        <MobileDashboard
+          title={navBarText}
+          handleSeeMore={handleSeeMore}
+          Programme={Programme}
+          resetDashboard={resetDashboard}
+          transactionLog={transactionLog}
+        />
+      </div>
+    </>
   );
 }

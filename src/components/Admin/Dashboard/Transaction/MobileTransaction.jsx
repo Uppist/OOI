@@ -11,7 +11,7 @@ import copy from "../../../../assets/Dashboard/copy.svg";
 import delte from "../../../../assets/Dashboard/delte.svg";
 import Buttons from "./Buttons";
 
-export default function Transaction() {
+export default function MobileTransaction({ title }) {
   const [logs, setLogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
@@ -38,6 +38,8 @@ export default function Transaction() {
   const [isClick, setIsClick] = useState(null);
   const [isTime, setIsTime] = useState(false);
   const [selectedTime, setSelectedTime] = useState("All Time");
+  const [isMore, setIsMore] = useState(null);
+  const [selectMore, setSelectedMore] = useState(null);
 
   const Time = [
     "Today",
@@ -64,8 +66,17 @@ export default function Transaction() {
   function closeTime() {
     setIsTime(false);
   }
+
+  function handleSeeMore(index) {
+    setIsMore((prevIndex) => (prevIndex === index ? null : index));
+  }
+
+  function closeSeeMore() {
+    setIsMore(false);
+  }
   return (
-    <div className={styles.transaction}>
+    <div className={styles.mobiletransaction}>
+      <span>{title}</span>
       <div className={styles.log}>
         <span>Transaction Log</span>
         <div className={styles.div}>
@@ -94,28 +105,14 @@ export default function Transaction() {
       </div>
 
       <div className={styles.table}>
-        <div className={styles.tableHeader}>
-          <div className={`${styles.name} ${styles.headerText}`}>
-            <span className={styles.firstName}>User Name</span>
-            <span>Email Address</span>
-            <span>Prompt Query</span>
-            <span>AI Response</span>
-            <span>Date/Time</span>
-            <span className={styles.svg}>Svg</span>
-          </div>
+        {transaction.map((item, index) => (
+          <div className={styles.container} key={index}>
+            <div className={styles.header}>
+              <div>
+                <label>Name:</label> <span>{item.name}</span>
+              </div>
+              <img src={vector} alt='' onClick={() => handleClick(index)} />
 
-          {transaction.map((data, index) => (
-            <div className={styles.name} key={index}>
-              <span>{data.name}</span>
-              <span>{data.email}</span>
-              <span>{data.number}</span>
-              <span>{data.amount}</span>
-              <span>{data.date}</span>
-              <img
-                src={vector}
-                alt=''
-                onClick={() => handleClick(index)}
-              />{" "}
               {isClick === index && (
                 <div className={styles.dropdown} onClick={closeClick}>
                   <div className={styles.overlay} onClick={closeClick}></div>
@@ -132,8 +129,30 @@ export default function Transaction() {
                 </div>
               )}
             </div>
-          ))}
-        </div>
+            <button
+              onClick={() => handleSeeMore(index)}
+              className={isMore === index ? styles.seeLess : styles.seeMore}
+            >
+              {isMore === index ? "See Less" : "See More"}
+            </button>
+            {isMore === index && (
+              <div className={styles.moreInfo}>
+                <div className={styles.more}>
+                  <label>Email:</label> <span>{item.email}</span>
+                </div>
+                <div className={styles.more}>
+                  <label>Phone Number:</label> <span>{item.number}</span>
+                </div>
+                <div className={styles.more}>
+                  <label>Amount:</label> <span>{item.amount}</span>
+                </div>
+                <div className={styles.more}>
+                  <label>Date/Time:</label> <span>{item.date}</span>
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
 
         <Buttons
           currentPage={currentPage}

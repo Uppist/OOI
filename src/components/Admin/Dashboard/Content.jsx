@@ -4,9 +4,10 @@ import React from "react";
 import styles from "./style.module.css";
 import image from "../../../assets/angle-left.svg";
 
-export default function Content({ handleSeeMore, Programme }) {
+export default function Content({ handleSeeMore, Programme, title }) {
   return (
-    <div className={styles.dashboard}>
+    <div className={styles.content}>
+      <span>{title}</span>
       <div className={styles.revenue}>
         <span>Total Revenue</span>
         <label>₦1,000</label>

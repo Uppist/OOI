@@ -7,13 +7,13 @@
   justify-content: center;
 }
 
-.login > div {
+.container {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.login > div label {
+.container label {
   font-size: 30px;
   font-weight: 600;
   font-family: var(--font-inter);
@@ -62,9 +62,18 @@
   font-family: var(--font-inter);
   border-radius: 8px;
   border: 0;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
+  .login {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .container {
+    margin-top: 100px;
+  }
   .login div label {
     font-size: 20px;
   }
