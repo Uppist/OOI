@@ -5,7 +5,7 @@ import styles from "../Newsroom/newsroom.module.css";
 import image1 from "../../../assets/Media/image1.jpg";
 import image2 from "../../../assets/Media/image2.jpeg";
 import image3 from "../../../assets/Media/image3.jpg";
-import image4 from "../../../assets/Media/image4.jpg";
+import image4 from "../../../assets/Media/image4.JPG";
 import image5 from "../../../assets/Media/image5.jpeg";
 import image6 from "../../../assets/Media/image6.jpeg";
 import image7 from "../../../assets/Media/image7.jpeg";
