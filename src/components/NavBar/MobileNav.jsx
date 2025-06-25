@@ -195,13 +195,7 @@ export default function MobileNav({ isSidebarVisible, onClose, logo }) {
                 Refer a Non-profit
               </Link>
             </span>
-            <span
-              onClick={() => {
-                onClose();
-              }}
-            >
-              Donate to OOI
-            </span>
+
             <span>
               <Link
                 to='/contactus'

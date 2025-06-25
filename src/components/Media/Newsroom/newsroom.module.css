@@ -261,6 +261,7 @@
 @media only screen and (max-width: 768px) {
   .newsroom {
     padding: 60px 24px 0;
+    align-items: center;
   }
 
   .newsroom h2 {
@@ -331,15 +332,28 @@
 
   .report label {
     margin-left: -88px;
-    margin-top: 230px;
+    margin-top: 212px;
   }
 
   .report > img {
-    width: -webkit-fill-available;
+    width: 333px;
   }
 
   .report > div {
     padding: 32px 24px;
+  }
+
+  .report dic span {
+    font-size: 10px;
+  }
+
+  .h3 h3 {
+    font-size: 20px;
+  }
+
+  .report div p {
+    font-size: 14px;
+    width: 255px;
   }
 }
 
