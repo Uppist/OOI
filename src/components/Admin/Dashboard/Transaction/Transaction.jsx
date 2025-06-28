@@ -1,8 +1,7 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./style.module.css";
-import transaction from "./transaction.json";
 import time from "../../../../assets/Dashboard/time.svg";
 import right from "../../../../assets/Dashboard/icon.svg";
 import csv from "../../../../assets/Dashboard/csv.svg";
@@ -11,30 +10,14 @@ import copy from "../../../../assets/Dashboard/copy.svg";
 import delte from "../../../../assets/Dashboard/delte.svg";
 import Buttons from "./Buttons";
 
-export default function Transaction() {
+export default function Transaction({ transactionDetail }) {
   const [logs, setLogs] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 15;
-
-  // useEffect(() => {
-  //   const fetchLogs = async () => {
-  //     try {
-  //       const response = await axios.get("https://bot.uppist.xyz/logs");
-  //       setLogs(response.data);
-  //       setLoading(false);
-  //     } catch (error) {
-  //       console.error("Failed to fetch logs:", error);
-  //       setLoading(false);
-  //     }
-  //   };
-
-  //   fetchLogs();
-  // }, []);
-
   const totalPages = Math.ceil(logs.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentLogs = logs.slice(startIndex, startIndex + itemsPerPage);
+
   const [isClick, setIsClick] = useState(null);
   const [isTime, setIsTime] = useState(false);
   const [selectedTime, setSelectedTime] = useState("All Time");
@@ -49,21 +32,42 @@ export default function Transaction() {
     "All Time",
   ];
 
-  function handleClick(index) {
-    setIsClick(index);
-  }
+  useEffect(() => {
+    setLogs(transactionDetail || []);
+  }, [transactionDetail]);
 
-  function closeClick() {
-    setIsClick(false);
-  }
-
-  function handleTime(item) {
+  const handleClick = (index) => setIsClick(index);
+  const closeClick = () => setIsClick(null);
+  const handleTime = (item) => {
     setSelectedTime(item);
-    setIsTime((prev) => !prev);
-  }
-  function closeTime() {
     setIsTime(false);
+  };
+  const closeTime = () => setIsTime(false);
+
+  const downloadCSV = () => {
+    const csvContent = logs
+      .map(
+        (data) =>
+          `${data.name},${data.email},${data.number},${data.amount},${data.date}`
+      )
+      .join("\n");
+    const blob = new Blob([csvContent], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "transactions.csv";
+    link.click();
+  };
+
+  // ✅ Show fallback if empty
+  if (!logs || logs.length === 0) {
+    return (
+      <div className={`${styles.transaction} ${styles.log}`}>
+        No transaction data available
+      </div>
+    );
   }
+
   return (
     <div className={styles.transaction}>
       <div className={styles.log}>
@@ -86,7 +90,7 @@ export default function Transaction() {
               </div>
             </div>
           )}
-          <button className={styles.csv}>
+          <button className={styles.csv} onClick={downloadCSV}>
             <img src={csv} alt='' />
             Download CSV
           </button>
@@ -98,24 +102,20 @@ export default function Transaction() {
           <div className={`${styles.name} ${styles.headerText}`}>
             <span className={styles.firstName}>User Name</span>
             <span>Email Address</span>
-            <span>Prompt Query</span>
-            <span>AI Response</span>
+            <span>Phone Number</span>
+            <span>Amount</span>
             <span>Date/Time</span>
             <span className={styles.svg}>Svg</span>
           </div>
 
-          {transaction.map((data, index) => (
+          {currentLogs.map((data, index) => (
             <div className={styles.name} key={index}>
               <span>{data.name}</span>
               <span>{data.email}</span>
               <span>{data.number}</span>
               <span>{data.amount}</span>
               <span>{data.date}</span>
-              <img
-                src={vector}
-                alt=''
-                onClick={() => handleClick(index)}
-              />{" "}
+              <img src={vector} alt='' onClick={() => handleClick(index)} />
               {isClick === index && (
                 <div className={styles.dropdown} onClick={closeClick}>
                   <div className={styles.overlay} onClick={closeClick}></div>
