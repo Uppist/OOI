@@ -115,6 +115,9 @@ export default function Dashboard() {
           Programme={Programme}
           resetDashboard={resetDashboard}
           transactionLog={transactionLog}
+          transactionDetail={transactionDetail}
+          isLoading={isLoadingTransactions}
+          totalRevenue={totalRevenue}
         />
       </div>
     </>

@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./style.module.css";
 import transaction from "./transaction.json";
 import time from "../../../../assets/Dashboard/time.svg";
@@ -11,26 +11,15 @@ import copy from "../../../../assets/Dashboard/copy.svg";
 import delte from "../../../../assets/Dashboard/delte.svg";
 import Buttons from "./Buttons";
 
-export default function MobileTransaction({ title }) {
+export default function MobileTransaction({
+  title,
+  isLoadingTransactions,
+  transactionDetail,
+}) {
   const [logs, setLogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 15;
-
-  // useEffect(() => {
-  //   const fetchLogs = async () => {
-  //     try {
-  //       const response = await axios.get("https://bot.uppist.xyz/logs");
-  //       setLogs(response.data);
-  //       setLoading(false);
-  //     } catch (error) {
-  //       console.error("Failed to fetch logs:", error);
-  //       setLoading(false);
-  //     }
-  //   };
-
-  //   fetchLogs();
-  // }, []);
 
   const totalPages = Math.ceil(logs.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -67,13 +56,29 @@ export default function MobileTransaction({ title }) {
     setIsTime(false);
   }
 
+  useEffect(() => {
+    setLogs(transactionDetail || []);
+  }, [transactionDetail]);
+
   function handleSeeMore(index) {
     setIsMore((prevIndex) => (prevIndex === index ? null : index));
   }
 
-  function closeSeeMore() {
-    setIsMore(false);
-  }
+  const downloadCSV = () => {
+    const csvContent = logs
+      .map(
+        (data) =>
+          `${data.name},${data.email},${data.number},${data.amount},${data.date}`
+      )
+      .join("\n");
+    const blob = new Blob([csvContent], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "transactions.csv";
+    link.click();
+  };
+
   return (
     <div className={styles.mobiletransaction}>
       <span>{title}</span>
@@ -97,7 +102,7 @@ export default function MobileTransaction({ title }) {
               </div>
             </div>
           )}
-          <button className={styles.csv}>
+          <button className={styles.csv} onClick={downloadCSV}>
             <img src={csv} alt='' />
             Download CSV
           </button>
@@ -105,54 +110,63 @@ export default function MobileTransaction({ title }) {
       </div>
 
       <div className={styles.table}>
-        {transaction.map((item, index) => (
-          <div className={styles.container} key={index}>
-            <div className={styles.header}>
-              <div>
-                <label>Name:</label> <span>{item.name}</span>
-              </div>
-              <img src={vector} alt='' onClick={() => handleClick(index)} />
-
-              {isClick === index && (
-                <div className={styles.dropdown} onClick={closeClick}>
-                  <div className={styles.overlay} onClick={closeClick}></div>
-                  <div className={styles.copy}>
-                    <span>
-                      <img src={copy} alt='' />
-                      Copy
-                    </span>
-                    <span>
-                      <img src={delte} alt='' />
-                      Delete
-                    </span>
+        {!logs || logs.length === 0 ? (
+          <div className={styles.span2}>No transaction available</div>
+        ) : (
+          <>
+            {currentLogs.map((item, index) => (
+              <div className={styles.container} key={index}>
+                <div className={styles.header}>
+                  <div>
+                    <label>Name:</label> <span>{item.name}</span>
                   </div>
+                  <img src={vector} alt='' onClick={() => handleClick(index)} />
+
+                  {isClick === index && (
+                    <div className={styles.dropdown} onClick={closeClick}>
+                      <div
+                        className={styles.overlay}
+                        onClick={closeClick}
+                      ></div>
+                      <div className={styles.copy}>
+                        <span>
+                          <img src={copy} alt='' />
+                          Copy
+                        </span>
+                        <span>
+                          <img src={delte} alt='' />
+                          Delete
+                        </span>
+                      </div>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-            <button
-              onClick={() => handleSeeMore(index)}
-              className={isMore === index ? styles.seeLess : styles.seeMore}
-            >
-              {isMore === index ? "See Less" : "See More"}
-            </button>
-            {isMore === index && (
-              <div className={styles.moreInfo}>
-                <div className={styles.more}>
-                  <label>Email:</label> <span>{item.email}</span>
-                </div>
-                <div className={styles.more}>
-                  <label>Phone Number:</label> <span>{item.number}</span>
-                </div>
-                <div className={styles.more}>
-                  <label>Amount:</label> <span>{item.amount}</span>
-                </div>
-                <div className={styles.more}>
-                  <label>Date/Time:</label> <span>{item.date}</span>
-                </div>
+                <button
+                  onClick={() => handleSeeMore(index)}
+                  className={isMore === index ? styles.seeLess : styles.seeMore}
+                >
+                  {isMore === index ? "See Less" : "See More"}
+                </button>
+                {isMore === index && (
+                  <div className={styles.moreInfo}>
+                    <div className={styles.more}>
+                      <label>Email:</label> <span>{item.email}</span>
+                    </div>
+                    <div className={styles.more}>
+                      <label>Phone Number:</label> <span>{item.number}</span>
+                    </div>
+                    <div className={styles.more}>
+                      <label>Amount:</label> <span>{item.amount}</span>
+                    </div>
+                    <div className={styles.more}>
+                      <label>Date/Time:</label> <span>{item.date}</span>
+                    </div>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-        ))}
+            ))}
+          </>
+        )}
 
         <Buttons
           currentPage={currentPage}

@@ -12,17 +12,25 @@ export default function MobileDashboard({
   title,
   resetDashboard,
   transactionLog,
+  isLoadingTransactions,
+  transactionDetail,
+  totalRevenue,
 }) {
   return (
     <div>
       <Navbar resetDashboard={resetDashboard} />
       {transactionLog !== null ? (
-        <MobileTransaction title={title} />
+        <MobileTransaction
+          title={title}
+          transactionDetail={transactionDetail}
+          isLoading={isLoadingTransactions}
+        />
       ) : (
         <Content
           handleSeeMore={handleSeeMore}
           Programme={Programme}
           title={title}
+          totalRevenue={totalRevenue}
         />
       )}
     </div>

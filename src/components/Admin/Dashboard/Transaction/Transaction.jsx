@@ -60,13 +60,13 @@ export default function Transaction({ transactionDetail }) {
   };
 
   // ✅ Show fallback if empty
-  if (!logs || logs.length === 0) {
-    return (
-      <div className={`${styles.transaction} ${styles.log}`}>
-        No transaction data available
-      </div>
-    );
-  }
+  // if (!logs || logs.length === 0) {
+  //   return (
+  //     <div className={`${styles.transaction} ${styles.log}`}>
+  //       No transaction data available
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className={styles.transaction}>
@@ -108,31 +108,40 @@ export default function Transaction({ transactionDetail }) {
             <span className={styles.svg}>Svg</span>
           </div>
 
-          {currentLogs.map((data, index) => (
-            <div className={styles.name} key={index}>
-              <span>{data.name}</span>
-              <span>{data.email}</span>
-              <span>{data.number}</span>
-              <span>{data.amount}</span>
-              <span>{data.date}</span>
-              <img src={vector} alt='' onClick={() => handleClick(index)} />
-              {isClick === index && (
-                <div className={styles.dropdown} onClick={closeClick}>
-                  <div className={styles.overlay} onClick={closeClick}></div>
-                  <div className={styles.copy}>
-                    <span>
-                      <img src={copy} alt='' />
-                      Copy
-                    </span>
-                    <span>
-                      <img src={delte} alt='' />
-                      Delete
-                    </span>
-                  </div>
+          {!logs || logs.length === 0 ? (
+            <div className={styles.span}>No transaction available</div>
+          ) : (
+            <>
+              {currentLogs.map((data, index) => (
+                <div className={styles.name} key={index}>
+                  <span>{data.name}</span>
+                  <span>{data.email}</span>
+                  <span>{data.number}</span>
+                  <span>{data.amount}</span>
+                  <span>{data.date}</span>
+                  <img src={vector} alt='' onClick={() => handleClick(index)} />
+                  {isClick === index && (
+                    <div className={styles.dropdown} onClick={closeClick}>
+                      <div
+                        className={styles.overlay}
+                        onClick={closeClick}
+                      ></div>
+                      <div className={styles.copy}>
+                        <span>
+                          <img src={copy} alt='' />
+                          Copy
+                        </span>
+                        <span>
+                          <img src={delte} alt='' />
+                          Delete
+                        </span>
+                      </div>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-          ))}
+              ))}
+            </>
+          )}
         </div>
 
         <Buttons
