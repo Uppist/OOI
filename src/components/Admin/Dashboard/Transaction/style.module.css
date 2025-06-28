@@ -305,6 +305,7 @@
     font-weight: 600;
     color: var(--color-orange);
     font-family: var(--font-inter);
+    cursor: pointer;
   }
 
   .seeLess {
@@ -320,6 +321,7 @@
     font-weight: 600;
     color: var(--color-orange);
     font-family: var(--font-inter);
+    cursor: pointer;
   }
 
   .header {
@@ -343,9 +345,9 @@
 
   .header div span,
   .more span {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
-    color: var(--color-text);
+    color: hsla(0, 0%, 17%, 1);
     font-family: var(--font-inter);
   }
 

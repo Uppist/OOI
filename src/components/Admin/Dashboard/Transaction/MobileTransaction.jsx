@@ -15,6 +15,7 @@ export default function MobileTransaction({
   title,
   isLoadingTransactions,
   transactionDetail,
+  setTransactionDetail,
 }) {
   const [logs, setLogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -68,7 +69,7 @@ export default function MobileTransaction({
     const csvContent = logs
       .map(
         (data) =>
-          `${data.name},${data.email},${data.number},${data.amount},${data.date}`
+          `${data.first_name},${data.email},${data.phone_number},${data.amount},${data.date}`
       )
       .join("\n");
     const blob = new Blob([csvContent], { type: "text/csv" });
@@ -118,7 +119,7 @@ export default function MobileTransaction({
               <div className={styles.container} key={index}>
                 <div className={styles.header}>
                   <div>
-                    <label>Name:</label> <span>{item.name}</span>
+                    <label>Name:</label> <span>{item.first_name}</span>
                   </div>
                   <img src={vector} alt='' onClick={() => handleClick(index)} />
 
@@ -153,10 +154,12 @@ export default function MobileTransaction({
                       <label>Email:</label> <span>{item.email}</span>
                     </div>
                     <div className={styles.more}>
-                      <label>Phone Number:</label> <span>{item.number}</span>
+                      <label>Phone Number:</label>{" "}
+                      <span>{item.phone_number}</span>
                     </div>
                     <div className={styles.more}>
-                      <label>Amount:</label> <span>{item.amount}</span>
+                      <label>Amount:</label>{" "}
+                      <span>₦{Number(item.amount).toLocaleString()}</span>
                     </div>
                     <div className={styles.more}>
                       <label>Date/Time:</label> <span>{item.date}</span>

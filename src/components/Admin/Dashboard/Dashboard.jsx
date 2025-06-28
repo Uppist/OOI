@@ -12,7 +12,7 @@ import axios from "axios";
 export default function Dashboard() {
   const Programme = [
     {
-      title: "Health Programme Impact (HIP)",
+      title: "Health Impact Programme (HIP)",
     },
     {
       title: "October Future Funds (OFF)",
@@ -31,6 +31,27 @@ export default function Dashboard() {
     },
   ];
 
+  const transactionTitle = [
+    {
+      title: "Health Impact Programme",
+    },
+    {
+      title: "October Future Fund",
+    },
+    {
+      title: "Future Forward Initiative",
+    },
+    {
+      title: "The Gero Programme",
+    },
+    {
+      title: "Haven Bloom Initiative",
+    },
+    {
+      title: "The Giving Trybe",
+    },
+  ];
+
   const [totalRevenue, setTotalRevenue] = useState(0);
   const [transactionLog, setTransactionLog] = useState(null);
 
@@ -39,6 +60,7 @@ export default function Dashboard() {
   const [isLoadingTransactions, setIsLoadingTransactions] = useState(false);
 
   const [navBarText, setNavBarText] = useState("Dashboard");
+  const [totalAmount, setTotalAmount] = useState({});
 
   function resetDashboard() {
     setNavBarText("Dashboard");
@@ -50,16 +72,45 @@ export default function Dashboard() {
     axios
       .get("https://api.luround.com/v1/payments/ooi-total-revenue")
       .then((res) => {
-        console.log(res.data.total_amount);
-        setTotalRevenue(res.data.total_amount);
+        setTotalRevenue(Number(res.data.total_amount));
       })
       .catch((err) => {
         console.error("Error fetching total revenue:", err.message);
       });
   }, [transactionLog]);
 
+  useEffect(() => {
+    async function fetchAllProgrammeTotals() {
+      const totals = {};
+
+      for (const prog of transactionTitle) {
+        try {
+          const res = await axios.get(
+            `https://api.luround.com/v1/payments/ooi-account-payment-logs?account_name=${prog.title}`
+          );
+
+          const total = res.data.reduce(
+            (sum, item) => sum + Number(item.amount || 0),
+            0
+          );
+          totals[prog.title] = total;
+        } catch (error) {
+          console.error(
+            `Error fetching logs for ${prog.title}:`,
+            error.message
+          );
+          totals[prog.title] = 0;
+        }
+      }
+
+      setTotalAmount(totals);
+    }
+
+    fetchAllProgrammeTotals();
+  }, []);
+
   function handleSeeMore(index) {
-    const selectedTitle = Programme[index]?.title;
+    const selectedTitle = transactionTitle[index]?.title;
 
     setNavBarText(selectedTitle);
     setTransactionLog(index);
@@ -67,13 +118,13 @@ export default function Dashboard() {
 
     axios
       .get(
-        `https://api.luround.com/v1/payments/ooi-account-payment-logs?account_name=${encodeURIComponent(
-          selectedTitle
-        )}`
+        `https://api.luround.com/v1/payments/ooi-account-payment-logs?account_name=${selectedTitle}`
       )
       .then((res) => {
+        console.log("Fetched transaction logs:", res.data);
         if (Array.isArray(res.data) && res.data.length > 0) {
           setTransactionDetail(res.data);
+          // console.log("Transaction details:", transactionDetail[0]?.amount);
         } else {
           setTransactionDetail([]); // fallback to empty
         }
@@ -96,12 +147,16 @@ export default function Dashboard() {
           <Transaction
             transactionDetail={transactionDetail}
             isLoading={isLoadingTransactions}
+            setTransactionDetail={setTransactionDetail}
           />
         ) : (
           <Content
             handleSeeMore={handleSeeMore}
             Programme={Programme}
             totalRevenue={totalRevenue}
+            setTransactionDetail={setTransactionDetail}
+            total={totalAmount}
+            transactionTitle={transactionTitle}
           />
         )}
       </div>
@@ -118,6 +173,9 @@ export default function Dashboard() {
           transactionDetail={transactionDetail}
           isLoading={isLoadingTransactions}
           totalRevenue={totalRevenue}
+          setTransactionDetail={setTransactionDetail}
+          total={totalAmount}
+          transactionTitle={transactionTitle}
         />
       </div>
     </>

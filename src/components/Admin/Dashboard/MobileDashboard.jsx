@@ -15,6 +15,9 @@ export default function MobileDashboard({
   isLoadingTransactions,
   transactionDetail,
   totalRevenue,
+  setTransactionDetail,
+  total,
+  transactionTitle,
 }) {
   return (
     <div>
@@ -24,6 +27,7 @@ export default function MobileDashboard({
           title={title}
           transactionDetail={transactionDetail}
           isLoading={isLoadingTransactions}
+          setTransactionDetail={setTransactionDetail}
         />
       ) : (
         <Content
@@ -31,6 +35,9 @@ export default function MobileDashboard({
           Programme={Programme}
           title={title}
           totalRevenue={totalRevenue}
+          setTransactionDetail={setTransactionDetail}
+          total={total}
+          transactionTitle={transactionTitle}
         />
       )}
     </div>

@@ -48,7 +48,7 @@ export default function Transaction({ transactionDetail }) {
     const csvContent = logs
       .map(
         (data) =>
-          `${data.name},${data.email},${data.number},${data.amount},${data.date}`
+          `${data.first_name},${data.email},${data.phone_number},${data.amount},${data.date}`
       )
       .join("\n");
     const blob = new Blob([csvContent], { type: "text/csv" });
@@ -58,15 +58,6 @@ export default function Transaction({ transactionDetail }) {
     link.download = "transactions.csv";
     link.click();
   };
-
-  // ✅ Show fallback if empty
-  // if (!logs || logs.length === 0) {
-  //   return (
-  //     <div className={`${styles.transaction} ${styles.log}`}>
-  //       No transaction data available
-  //     </div>
-  //   );
-  // }
 
   return (
     <div className={styles.transaction}>
@@ -114,10 +105,10 @@ export default function Transaction({ transactionDetail }) {
             <>
               {currentLogs.map((data, index) => (
                 <div className={styles.name} key={index}>
-                  <span>{data.name}</span>
+                  <span>{data.first_name}</span>
                   <span>{data.email}</span>
-                  <span>{data.number}</span>
-                  <span>{data.amount}</span>
+                  <span>{data.phone_number}</span>
+                  <span>₦{Number(data.amount).toLocaleString()}</span>
                   <span>{data.date}</span>
                   <img src={vector} alt='' onClick={() => handleClick(index)} />
                   {isClick === index && (
@@ -131,7 +122,7 @@ export default function Transaction({ transactionDetail }) {
                           <img src={copy} alt='' />
                           Copy
                         </span>
-                        <span>
+                        <span onClick={() => handleDelete(data._id)}>
                           <img src={delte} alt='' />
                           Delete
                         </span>

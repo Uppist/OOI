@@ -75,6 +75,7 @@
 .p p span {
   font-weight: 600;
   color: var(--color-orange) !important;
+  background-color: yellow;
 }
 
 @media only screen and (max-width: 768px) {

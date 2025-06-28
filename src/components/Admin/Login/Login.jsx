@@ -27,12 +27,14 @@ export default function Login() {
       alert("Please fill in all fields");
       return;
     }
-    axios.post("https://api.luround.com/v1/auth/login", data).then((res) => {
-      // console.log("response", res);
-      alert("Login successful");
-      navigate("/dashboard");
-      window.location.reload();
-    });
+    axios
+      .post("https://api.luround.com/v1/auth/ooi-login", data)
+      .then((res) => {
+        // console.log("response", res);
+        alert("Login successful");
+        navigate("/dashboard");
+        window.location.reload();
+      });
   }
 
   return (
