@@ -159,7 +159,7 @@ export default function Transaction({ transactionDetail }) {
                   <span>₦{Number(data.amount).toLocaleString()}</span>
                   <span>{new Date(data.date).toLocaleString()}</span>
                   <img src={vector} alt='' onClick={() => handleClick(index)} />
-                  {isClick === index && (
+                  {/* {isClick === index && (
                     <div className={styles.dropdown} onClick={closeClick}>
                       <div
                         className={styles.overlay}
@@ -176,7 +176,7 @@ export default function Transaction({ transactionDetail }) {
                         </span>
                       </div>
                     </div>
-                  )}
+                  )} */}
                 </div>
               ))}
             </>

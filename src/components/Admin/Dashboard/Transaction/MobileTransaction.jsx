@@ -165,13 +165,13 @@ export default function MobileTransaction({
                   </div>
                   <img src={vector} alt='' onClick={() => handleClick(index)} />
 
-                  {isClick === index && (
+                  {/* {isClick === index && (
                     <div className={styles.dropdown} onClick={closeClick}>
                       <div
                         className={styles.overlay}
                         onClick={closeClick}
                       ></div>
-                      {/* <div className={styles.copy}>
+                      <div className={styles.copy}>
                         <span>
                           <img src={copy} alt='' />
                           Copy
@@ -180,9 +180,9 @@ export default function MobileTransaction({
                           <img src={delte} alt='' />
                           Delete
                         </span>
-                      </div> */}
+                      </div>
                     </div>
-                  )}
+                  )} */}
                 </div>
                 <button
                   onClick={() => handleSeeMore(index)}
