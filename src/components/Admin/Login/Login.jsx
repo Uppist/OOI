@@ -31,7 +31,7 @@ export default function Login() {
       .post("https://api.luround.com/v1/auth/ooi-login", data)
       .then((res) => {
         // console.log("response", res);
-        alert("Login successful");
+        // alert("Login successful");
         navigate("/dashboard");
         window.location.reload();
       });
@@ -65,7 +65,9 @@ export default function Login() {
             />
           </div>
 
-          <button>Login</button>
+          <button>
+            <a>Login</a>
+          </button>
         </form>
       </div>
     </div>

@@ -13,14 +13,11 @@ import Buttons from "./Buttons";
 export default function Transaction({ transactionDetail }) {
   const [logs, setLogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 15;
-  const totalPages = Math.ceil(logs.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentLogs = logs.slice(startIndex, startIndex + itemsPerPage);
-
   const [isClick, setIsClick] = useState(null);
   const [isTime, setIsTime] = useState(false);
   const [selectedTime, setSelectedTime] = useState("All Time");
+
+  const itemsPerPage = 15;
 
   const Time = [
     "Today",
@@ -35,6 +32,10 @@ export default function Transaction({ transactionDetail }) {
   useEffect(() => {
     setLogs(transactionDetail || []);
   }, [transactionDetail]);
+
+  useEffect(() => {
+    setCurrentPage(1); // Reset to page 1 when time filter changes
+  }, [selectedTime]);
 
   const handleClick = (index) => setIsClick(index);
   const closeClick = () => setIsClick(null);
@@ -58,6 +59,53 @@ export default function Transaction({ transactionDetail }) {
     link.download = "transactions.csv";
     link.click();
   };
+
+  function filterByTime(logs) {
+    const now = new Date();
+
+    return logs.filter((log) => {
+      const logDate = new Date(log.date);
+
+      switch (selectedTime) {
+        case "Today":
+          return logDate.toDateString() === now.toDateString();
+
+        case "Yesterday":
+          const yesterday = new Date();
+          yesterday.setDate(now.getDate() - 1);
+          return logDate.toDateString() === yesterday.toDateString();
+
+        case "This week":
+          const firstDayOfWeek = new Date(now);
+          firstDayOfWeek.setDate(now.getDate() - now.getDay());
+          return logDate >= firstDayOfWeek;
+
+        case "Last 7 days":
+          const sevenDaysAgo = new Date();
+          sevenDaysAgo.setDate(now.getDate() - 6);
+          return logDate >= sevenDaysAgo;
+
+        case "This month":
+          return (
+            logDate.getMonth() === now.getMonth() &&
+            logDate.getFullYear() === now.getFullYear()
+          );
+
+        case "Last 30 days":
+          const thirtyDaysAgo = new Date();
+          thirtyDaysAgo.setDate(now.getDate() - 29);
+          return logDate >= thirtyDaysAgo;
+
+        default:
+          return true; // "All Time"
+      }
+    });
+  }
+
+  const filteredLogs = filterByTime(logs);
+  const totalPages = Math.ceil(filteredLogs.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentLogs = filteredLogs.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <div className={styles.transaction}>
@@ -96,10 +144,10 @@ export default function Transaction({ transactionDetail }) {
             <span>Phone Number</span>
             <span>Amount</span>
             <span>Date/Time</span>
-            <span className={styles.svg}>Svg</span>
+            <span className={styles.svg}>Options</span>
           </div>
 
-          {!logs || logs.length === 0 ? (
+          {!filteredLogs || filteredLogs.length === 0 ? (
             <div className={styles.span}>No transaction available</div>
           ) : (
             <>
@@ -109,7 +157,7 @@ export default function Transaction({ transactionDetail }) {
                   <span>{data.email}</span>
                   <span>{data.phone_number}</span>
                   <span>₦{Number(data.amount).toLocaleString()}</span>
-                  <span>{data.date}</span>
+                  <span>{new Date(data.date).toLocaleString()}</span>
                   <img src={vector} alt='' onClick={() => handleClick(index)} />
                   {isClick === index && (
                     <div className={styles.dropdown} onClick={closeClick}>
@@ -122,7 +170,7 @@ export default function Transaction({ transactionDetail }) {
                           <img src={copy} alt='' />
                           Copy
                         </span>
-                        <span onClick={() => handleDelete(data._id)}>
+                        <span>
                           <img src={delte} alt='' />
                           Delete
                         </span>

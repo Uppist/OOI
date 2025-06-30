@@ -21,10 +21,6 @@ export default function MobileTransaction({
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 15;
-
-  const totalPages = Math.ceil(logs.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentLogs = logs.slice(startIndex, startIndex + itemsPerPage);
   const [isClick, setIsClick] = useState(null);
   const [isTime, setIsTime] = useState(false);
   const [selectedTime, setSelectedTime] = useState("All Time");
@@ -80,6 +76,52 @@ export default function MobileTransaction({
     link.click();
   };
 
+  function filterByTime(logs) {
+    const now = new Date();
+
+    return logs.filter((log) => {
+      const logDate = new Date(log.date);
+
+      switch (selectedTime) {
+        case "Today":
+          return logDate.toDateString() === now.toDateString();
+
+        case "Yesterday":
+          const yesterday = new Date();
+          yesterday.setDate(now.getDate() - 1);
+          return logDate.toDateString() === yesterday.toDateString();
+
+        case "This week":
+          const firstDayOfWeek = new Date(now);
+          firstDayOfWeek.setDate(now.getDate() - now.getDay());
+          return logDate >= firstDayOfWeek;
+
+        case "Last 7 days":
+          const sevenDaysAgo = new Date();
+          sevenDaysAgo.setDate(now.getDate() - 6);
+          return logDate >= sevenDaysAgo;
+
+        case "This month":
+          return (
+            logDate.getMonth() === now.getMonth() &&
+            logDate.getFullYear() === now.getFullYear()
+          );
+
+        case "Last 30 days":
+          const thirtyDaysAgo = new Date();
+          thirtyDaysAgo.setDate(now.getDate() - 29);
+          return logDate >= thirtyDaysAgo;
+
+        default:
+          return true; // "All Time"
+      }
+    });
+  }
+  const filteredLogs = filterByTime(logs);
+  const totalPages = Math.ceil(filteredLogs.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentLogs = filteredLogs.slice(startIndex, startIndex + itemsPerPage);
+
   return (
     <div className={styles.mobiletransaction}>
       <span>{title}</span>
@@ -111,7 +153,7 @@ export default function MobileTransaction({
       </div>
 
       <div className={styles.table}>
-        {!logs || logs.length === 0 ? (
+        {!filteredLogs || filteredLogs.length === 0 ? (
           <div className={styles.span2}>No transaction available</div>
         ) : (
           <>
@@ -129,7 +171,7 @@ export default function MobileTransaction({
                         className={styles.overlay}
                         onClick={closeClick}
                       ></div>
-                      <div className={styles.copy}>
+                      {/* <div className={styles.copy}>
                         <span>
                           <img src={copy} alt='' />
                           Copy
@@ -138,7 +180,7 @@ export default function MobileTransaction({
                           <img src={delte} alt='' />
                           Delete
                         </span>
-                      </div>
+                      </div> */}
                     </div>
                   )}
                 </div>
