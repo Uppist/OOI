@@ -5,6 +5,9 @@ import styles from "./style.module.css";
 import { Link } from "react-router-dom";
 
 export default function Sustainability() {
+  function handleClick() {
+    window.open("https://utltrustees.com/private-trust-services/");
+  }
   return (
     <div className={styles.sustainability}>
       <div className={styles.text}>
@@ -14,10 +17,8 @@ export default function Sustainability() {
           management of all its programmes and campaigns. As donation levels
           grow for each initiative, we intend to transition the management of
           these funds into a{" "}
-          <span className={styles.link}>
-            <Link to='https://utltrustees.com/private-trust-services/'>
-              Trusteeship
-            </Link>{" "}
+          <span className={styles.link} onClick={handleClick}>
+            Trusteeship
           </span>{" "}
           structure. This will enhance corporate governance, prioritise
           transparency and accountability, and ensure that OOI remains focused

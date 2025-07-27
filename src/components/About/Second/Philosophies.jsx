@@ -37,29 +37,28 @@ export default function Philosophies() {
                 for us is continually engaging the entrepreneurial spirit that
                 fuels our passion to go beyond the conventional.
               </p>
+              <p>
+                We strive to attain the highest levels of <span>Integrity</span>{" "}
+                in everything that we do. Our character, at the level of
+                individuals and as an organisation, is defined by
+                accountability, fairness and grounded principles.
+              </p>
+              <p>
+                We take <span>Responsibility</span> for all that we do and their
+                implications on our environment, as what we seek to do is
+                continually support positive change.
+              </p>
+              <p>
+                The quest for <span>Excellence</span> is at the core of what we
+                do, how we do things and the continuous support we provide to
+                our stakeholders. This helps ensure that all we do goes through
+                a process leading towards building a lasting institution.
+              </p>
             </div>
           </div>
         </div>
-        <img src={image3} alt='' />
       </div>
-
-      <p className={styles.p}>
-        We strive to attain the highest levels of <span>Integrity</span> in
-        everything that we do. Our character, at the level of individuals and as
-        an organisation, is defined by accountability, fairness and grounded
-        principles.
-      </p>
-      <p className={styles.pText}>
-        We take <span>Responsibility</span> for all that we do and their
-        implications on our environment, as what we seek to do is continually
-        support positive change.
-      </p>
-      <p className={styles.pText}>
-        The quest for <span>Excellence</span> is at the core of what we do, how
-        we do things and the continuous support we provide to our stakeholders.
-        This helps ensure that all we do goes through a process leading towards
-        building a lasting institution.
-      </p>
+      <img src={image3} alt='' />
     </div>
   );
 }

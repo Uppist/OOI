@@ -181,7 +181,12 @@
   margin-top: 40px;
 }
 .carousel > img {
-  width: -webkit-fill-available;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.carousel img {
+  cursor: pointer;
 }
 
 .carousel div {
@@ -287,6 +292,11 @@
   .news1div > img,
   .news1div2 > img {
     width: 312px;
+  }
+
+  .carousel > img {
+    width: 312px;
+    margin: 0 auto;
   }
 
   .news1div span {

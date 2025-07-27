@@ -98,7 +98,7 @@
     opacity: 0;
     transition: opacity 0.9s ease-out;
   }
-  hr {
+  .div hr {
     display: none;
   }
   .div {

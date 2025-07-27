@@ -8,6 +8,9 @@
   gap: 60px;
 }
 
+.overview img {
+  width: 450px;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -49,6 +52,7 @@
   font-family: var(--font-inter);
   color: var(--color-text2);
   text-align: justify;
+  line-height: 1.4;
 }
 
 .container p span {

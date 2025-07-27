@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "./support.module.css";
-import logo1 from "../../../../assets/Programme/HIP/back.svg";
+import logo1 from "../../../../assets/Donate/tgpback.png";
 
 import support from "../../../../assets/Programme/TGP/image8.png";
 import { Link } from "react-router-dom";

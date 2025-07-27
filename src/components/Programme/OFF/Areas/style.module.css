@@ -32,7 +32,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
 }
 
 .image {
@@ -75,12 +75,11 @@
 .p p span {
   font-weight: 600;
   color: var(--color-orange) !important;
-  background-color: yellow;
 }
 
 @media only screen and (max-width: 768px) {
   .area {
-    padding: 60px 24px;
+    padding: 0px 24px;
     gap: 20px;
   }
 

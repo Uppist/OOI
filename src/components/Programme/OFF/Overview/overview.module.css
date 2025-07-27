@@ -48,7 +48,7 @@
 .div {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 25px;
 }
 
 .container p,
@@ -62,7 +62,11 @@
   line-height: 1.4;
 }
 
-.p2 p span {
+.p2 p {
+  margin-top: 25px;
+}
+
+.p p span {
   font-weight: 600;
   color: var(--color-orange);
   cursor: pointer;
@@ -72,12 +76,12 @@
   font-weight: 600;
 }
 
-.p2 {
+/* .p2 {
   padding: 0 0 0 80px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
+} */
 
 @media only screen and (max-width: 768px) {
   .overview {

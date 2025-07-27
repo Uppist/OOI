@@ -13,8 +13,8 @@ export default function FirstSection() {
   }, []);
   return (
     <div className={styles.firstSection}>
-      <img className={styles.desktopImage} src={image} alt='' />
-      <img className={styles.mobileImage} src={image2} alt='' />
+      {/* <img className={styles.desktopImage} src={image} alt='' /> */}
+      {/* <img className={styles.mobileImage} src={image2} alt='' /> */}
 
       <div className={styles.textContainer}>
         <div className={styles.text}>

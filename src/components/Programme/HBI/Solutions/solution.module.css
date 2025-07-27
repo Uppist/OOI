@@ -7,14 +7,14 @@
 }
 
 .container {
-  padding: 120px 80px 0 0;
+  padding: 60px 80px 0 0;
   display: flex;
   align-items: center;
   gap: 65px;
 }
 
 .container:nth-child(even) {
-  padding: 120px 0 0 80px;
+  padding: 60px 0 0 80px;
   flex-direction: row-reverse;
 }
 

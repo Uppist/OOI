@@ -40,47 +40,49 @@ export default function Overview() {
               As it currently stands, "even though primary education is
               officially free and compulsory, about 10.5 million of the
               country's children aged 5-14 years are not in school. Only 61
-              percent of 6-11 year-olds regularly attend primary school and
+              percent of 6-11 year-olds regularly attend primary school and only
+              35.6 percent of children aged 36-59 months receive early childhood
+              education. In the north of the country, the picture is even
+              bleaker, with a net attendance rate of 53 percent. Getting
+              out-of-school children back into education poses a massive
+              challenge.” - Culled from{" "}
+              <span
+                onClick={() =>
+                  handleUNI(" https://www.unicef.org/nigeria/education ")
+                }
+              >
+                UNICEF
+              </span>
+              . But when you move towards the North, "gender, like geography and
+              poverty, is an important factor in the pattern of educational
+              marginalisation. States in the north-east and north-west have
+              female primary net attendance rates of 47.7 percent and 47,3
+              percent, respectively, meaning that more than half of the girls
+              are not in school." - Culled from UNICEF. Thus, this will
+              influence OOI’s operational factors in delivering on the ideals of
+              the programme, especially in educating the primary target audience
+              of this programme.
+            </p>
+            <p>
+              The intention with OFF contributes to the United Nations’
+              Sustainable Development Goals (SDGs) -{" "}
+              <span
+                onClick={() => handleUNI("https://sdgs.un.org/goals/goal4  ")}
+              >
+                Goal 4
+              </span>{" "}
+              - which eventually leads to meeting the ideals of -{" "}
+              <span
+                onClick={() => handleUNI("https://sdgs.un.org/goals/goal10")}
+              >
+                Goal 10
+              </span>
+              .
             </p>
           </div>
         </div>
       </div>
-      <div className={styles.p2}>
-        <p>
-          only 35.6 percent of children aged 36-59 months receive early
-          childhood education. In the north of the country, the picture is even
-          bleaker, with a net attendance rate of 53 percent. Getting
-          out-of-school children back into education poses a massive challenge.”
-          - Culled from{" "}
-          <span
-            onClick={() =>
-              handleUNI(" https://www.unicef.org/nigeria/education ")
-            }
-          >
-            UNICEF
-          </span>
-          . But when you move towards the North, "gender, like geography and
-          poverty, is an important factor in the pattern of educational
-          marginalisation. States in the north-east and north-west have female
-          primary net attendance rates of 47.7 percent and 47,3 percent,
-          respectively, meaning that more than half of the girls are not in
-          school." - Culled from UNICEF. Thus, this will influence OOI’s
-          operational factors in delivering on the ideals of the programme,
-          especially in educating the primary target audience of this programme.
-        </p>
-        <p>
-          The intention with OFF contributes to the United Nations’ Sustainable
-          Development Goals (SDGs) -{" "}
-          <span onClick={() => handleUNI("https://sdgs.un.org/goals/goal4  ")}>
-            Goal 4
-          </span>{" "}
-          - which eventually leads to meeting the ideals of -{" "}
-          <span onClick={() => handleUNI("https://sdgs.un.org/goals/goal10")}>
-            Goal 10
-          </span>
-          .
-        </p>
-      </div>
+      {/* <div className={styles.p2}><p></div> */}
     </div>
   );
 }

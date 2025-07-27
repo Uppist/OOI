@@ -5,7 +5,7 @@
   margin-top: 70px;
   display: flex;
   flex-direction: column;
-  gap: 158px;
+  gap: 80px;
 }
 
 .content {
@@ -68,7 +68,7 @@
 }
 
 .container2 span {
-  padding: 136px 136px 136px 0px;
+  padding: 50px 80px 50px 0px;
   font-size: 18px;
   text-align: justify;
   font-weight: 400;

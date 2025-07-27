@@ -59,6 +59,12 @@
   font-weight: 500;
 }
 
+.text ul li,
+.text span,
+.ul li {
+  text-align: justify;
+}
+
 /* .text ul li,
 .ul ul li {
   display: flex;

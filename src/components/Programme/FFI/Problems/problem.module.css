@@ -74,7 +74,7 @@
 
 @media only screen and (max-width: 768px) {
   .problem {
-    padding: 60px 24px 0;
+    padding: 0px 24px 0;
   }
   .container {
     gap: 12px;

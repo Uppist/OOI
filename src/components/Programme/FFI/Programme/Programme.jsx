@@ -31,7 +31,7 @@ export default function Programme() {
             mentorship, and support.
           </p>
         </div>
-        <img className={styles.desktopImage} src={programme2} alt='' />
+        <img className={styles.desktopImage2} src={programme2} alt='' />
         <img className={styles.mobileImage} src={programme4} alt='' />
       </div>
       <div className={styles.container2}>

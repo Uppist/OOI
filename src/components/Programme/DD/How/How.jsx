@@ -1,6 +1,8 @@
 /** @format */
 
 import React from "react";
+import logo1 from "../../../../assets/Utilityicon.svg";
+
 import styles from "./how.module.css";
 import image2 from "../../../../assets/Programme/DD/image4.png";
 import check from "../../../../assets/Programme/DD/check_circle.svg";
@@ -40,6 +42,14 @@ export default function How() {
           </ul>
         </div>
       </div>
+
+      <button>
+        <Link to='/programmes'>
+          {" "}
+          <img src={logo1} alt='' />
+          Back
+        </Link>
+      </button>
     </div>
   );
 }

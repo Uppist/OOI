@@ -1,7 +1,7 @@
 /** @format */
 
 .overview {
-  padding: 120px 80px;
+  padding: 120px 80px 100px;
   margin-top: 65px;
   display: flex;
   flex-direction: column;
@@ -90,6 +90,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.p ul li {
+  text-align: justify;
 }
 
 @media only screen and (max-width: 768px) {

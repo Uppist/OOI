@@ -30,17 +30,19 @@ export default function Sustainability() {
               areas, T.E.A.C.H., OOI is dedicated to empowering individuals and
               strengthening communities.
             </p>
+
+            <p>
+              With a strong governance structure, commitment to transparency and
+              a focus on sustainable practices, OOI is set to make significant
+              contributions to the betterment of societies. By fostering
+              collaboration, embracing innovation and remaining responsive to
+              the evolving needs of the communities, OOI envisions a future
+              where every individual has opportunities to thrive and reach their
+              full potential.
+            </p>
           </div>
         </div>
       </div>
-      <p>
-        With a strong governance structure, commitment to transparency and a
-        focus on sustainable practices, OOI is set to make significant
-        contributions to the betterment of societies. By fostering
-        collaboration, embracing innovation and remaining responsive to the
-        evolving needs of the communities, OOI envisions a future where every
-        individual has opportunities to thrive and reach their full potential.
-      </p>
     </div>
   );
 }

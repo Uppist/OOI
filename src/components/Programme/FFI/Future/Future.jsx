@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "./future.module.css";
-import logo1 from "../../../../assets/Programme/HIP/back.svg";
+import logo1 from "../../../../assets/Donate/ffiback.png";
 
 import future from "../../../../assets/Programme/FFI/future.png";
 import { Link } from "react-router-dom";

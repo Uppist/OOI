@@ -3,7 +3,7 @@
 .funds {
   display: flex;
   align-items: center;
-  padding: 60px 0 60px 80px;
+  padding: 0px 0 60px 80px;
   gap: 40px;
 }
 
@@ -42,6 +42,10 @@
 
 .text ul span {
   font-weight: 500;
+}
+
+.text ul li {
+  text-align: justify;
 }
 
 @media only screen and (max-width: 768px) {
