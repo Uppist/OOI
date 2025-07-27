@@ -97,6 +97,7 @@
   font-weight: 600;
   color: var(--color-orange) !important;
   font-family: var(--font-inter);
+  text-align: justify;
 }
 
 .mission p {
@@ -106,6 +107,7 @@
   color: var(--color-text);
   font-family: var(--font-inter);
   margin-top: 20px;
+  text-align: justify;
 }
 
 .philosophies > p {

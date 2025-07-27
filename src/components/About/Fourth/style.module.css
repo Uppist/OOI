@@ -23,6 +23,7 @@
 .image {
   display: flex;
   gap: 58px;
+  align-items: center;
 }
 
 .content p {
@@ -77,6 +78,11 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.image > img {
+  width: 480px;
+  height: 480px;
 }
 
 .text h2 {

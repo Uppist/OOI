@@ -40,43 +40,44 @@ export default function Assessment() {
                 inform strategic decision making.
               </li>
             </ul>
+            <ul>
+              <li>
+                <img src={check} alt='' />
+                <span> Annual Reports:</span> OOI publishes detailed annual
+                reports that provide a transparent and comprehensive overview of
+                its activities, achievements, financial performance and impact.
+                In addition, we would be publishing where we have failed and the
+                lessons learnt from those experiences as a way to improve how we
+                do things. These reports will be publicly available on our
+                website for all our stakeholders.
+              </li>
+              <li>
+                <img src={check} alt='' />
+                <span> Donor Engagement:</span> OOI actively engages donors in
+                the assessment and reporting processes by providing regular
+                updates on the progress of its programmes by sharing stories of
+                impact and inviting feedback. This approach fosters a sense of
+                ownership and we hope it always encourages continued support for
+                OOI’s initiatives.
+              </li>
+              <li>
+                <img src={check} alt='' />
+                <span> External Evaluation:</span> To maintain the highest
+                standards of accountability, OOI will periodically commission
+                external evaluations of its programmes by independent experts.
+                These evaluations will provide an objective assessment of
+                programme effectiveness and identify areas for improvement.
+              </li>
+            </ul>
+            <p>
+              The continued implementation of this comprehensive assessment and
+              reporting structure aims to demonstrate OOI’s commitment to
+              transparency, accountability and learning, while also fostering
+              trust and encouraging donor participation in its activities.
+            </p>
           </div>
           <img src={image9} alt='' />
         </div>
-        <ul>
-          <li>
-            <img src={check} alt='' />
-            <span> Annual Reports:</span> OOI publishes detailed annual reports
-            that provide a transparent and comprehensive overview of its
-            activities, achievements, financial performance and impact. In
-            addition, we would be publishing where we have failed and the
-            lessons learnt from those experiences as a way to improve how we do
-            things. These reports will be publicly available on our website for
-            all our stakeholders.
-          </li>
-          <li>
-            <img src={check} alt='' />
-            <span> Donor Engagement:</span> OOI actively engages donors in the
-            assessment and reporting processes by providing regular updates on
-            the progress of its programmes by sharing stories of impact and
-            inviting feedback. This approach fosters a sense of ownership and we
-            hope it always encourages continued support for OOI’s initiatives.
-          </li>
-          <li>
-            <img src={check} alt='' />
-            <span> External Evaluation:</span> To maintain the highest standards
-            of accountability, OOI will periodically commission external
-            evaluations of its programmes by independent experts. These
-            evaluations will provide an objective assessment of programme
-            effectiveness and identify areas for improvement.
-          </li>
-        </ul>
-        <p>
-          The continued implementation of this comprehensive assessment and
-          reporting structure aims to demonstrate OOI’s commitment to
-          transparency, accountability and learning, while also fostering trust
-          and encouraging donor participation in its activities.
-        </p>
       </div>
     </div>
   );
