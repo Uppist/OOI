@@ -49,40 +49,24 @@ export default function MobileNav({ isSidebarVisible, onClose, logo }) {
       </div>
 
       <ul className={styles.sidebarmenu}>
-        <Link to='/'>
-          <li
-            className={styles.sidebarlist}
-            onClick={() => {
-              onClose();
-            }}
-          >
-            About Us{" "}
-          </li>
+        <Link to='/' onClick={onClose}>
+          <li className={styles.sidebarlist}>About Us </li>
         </Link>
         <hr />
-        <Link to='/programmes'>
-          <li
-            className={styles.sidebarlist}
-            onClick={() => {
-              onClose();
-            }}
-          >
-            Programmes
-          </li>
+        <Link
+          to='/programmes'
+          onClick={() => {
+            onClose();
+          }}
+        >
+          <li className={styles.sidebarlist}>Programmes</li>
         </Link>
         <hr />
-        <Link to='/givengo'>
-          <li
-            className={styles.sidebarlist}
-            onClick={() => {
-              onClose();
-            }}
-          >
-            Givengo{" "}
-          </li>
+        <Link to='/givengo' onClick={onClose}>
+          <li className={styles.sidebarlist}>Givengo </li>
         </Link>
         <hr />
-        <li className={styles.sidebarlist}>
+        <li className={styles.sidebarlist} onClick={mediaDropdown}>
           Media{" "}
           <svg
             onClick={mediaDropdown}
@@ -106,43 +90,23 @@ export default function MobileNav({ isSidebarVisible, onClose, logo }) {
         {isOpen && (
           <div className={styles.dropdown}>
             <span>
-              <Link
-                to='/partners'
-                onClick={() => {
-                  onClose();
-                }}
-              >
+              <Link to='/partners' onClick={onClose}>
                 {" "}
                 Partners
               </Link>
             </span>
             <span>
-              <Link
-                to='/newsroom'
-                onClick={() => {
-                  onClose();
-                }}
-              >
+              <Link to='/newsroom' onClick={onClose}>
                 Newsroom
               </Link>
             </span>
             <span>
-              <Link
-                to='/gallery'
-                onClick={() => {
-                  onClose();
-                }}
-              >
+              <Link to='/gallery' onClick={onClose}>
                 Gallery
               </Link>
             </span>
             <span>
-              <Link
-                to='/reports'
-                onClick={() => {
-                  onClose();
-                }}
-              >
+              <Link to='/reports' onClick={onClose}>
                 Featured Reports
               </Link>
             </span>
@@ -150,7 +114,7 @@ export default function MobileNav({ isSidebarVisible, onClose, logo }) {
         )}
         <hr />
         {/* <Link to='/contactus'> */}
-        <li className={styles.sidebarlist}>
+        <li className={styles.sidebarlist} onClick={engageDropdown}>
           Engage
           <svg
             onClick={engageDropdown}
@@ -176,22 +140,12 @@ export default function MobileNav({ isSidebarVisible, onClose, logo }) {
         {isEngage && (
           <div className={styles.dropdown}>
             <span>
-              <Link
-                to='/volunteer'
-                onClick={() => {
-                  onClose();
-                }}
-              >
+              <Link to='/volunteer' onClick={onClose}>
                 Volunteer
               </Link>
             </span>
             <span>
-              <Link
-                to='/refer'
-                onClick={() => {
-                  onClose();
-                }}
-              >
+              <Link to='/refer' onClick={onClose}>
                 Refer a Non-profit
               </Link>
             </span>

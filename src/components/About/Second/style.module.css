@@ -117,6 +117,10 @@
   color: var(--color-text);
   font-family: var(--font-inter);
 }
+
+.philosophies img {
+  height: fit-content;
+}
 .p {
   margin-top: -10px !important;
 }
@@ -129,7 +133,8 @@
     margin-top: 100px;
   }
 
-  .container > img {
+  .container > img,
+  .philosophies > img {
     width: 312px;
   }
 
@@ -164,6 +169,7 @@
     padding: 60px 24px 0;
     margin-top: 50px;
     flex-direction: column-reverse;
+    align-items: center;
   }
 
   .text h2 {
@@ -210,6 +216,7 @@
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
   .philosophies {
     padding: 60px 24px;
+    flex-direction: column-reverse;
   }
   .container {
     padding: 60px 24px;
@@ -248,7 +255,7 @@
 
   .text h2 {
     position: relative;
-    top: -500px;
+    top: -735px;
     text-align: center;
   }
 

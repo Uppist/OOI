@@ -126,7 +126,7 @@
   .image {
     flex-direction: column-reverse;
     gap: 10px;
-    align-items: end;
+    align-items: center;
   }
 
   .assessment h2 {
@@ -136,6 +136,7 @@
 
   .image > img {
     width: 312px;
+    height: fit-content;
   }
 
   .text p,
@@ -171,7 +172,7 @@
 
   .text {
     gap: 0;
-    margin-top: -35px;
+    /* margin-top: -35px; */
   }
 
   .text h2 {
@@ -188,13 +189,25 @@
     gap: 20px;
   }
 
+  .sustainability {
+    margin-top: 65px;
+  }
+
   .image {
     flex-direction: column-reverse;
     gap: 0;
   }
 
+  .assessment h2 {
+    font-size: 40px;
+  }
+
   .text {
     margin-top: -100px;
+  }
+
+  .content p {
+    margin-top: 85px;
   }
 
   .container {
@@ -203,7 +216,7 @@
 
   .text h2 {
     position: relative;
-    top: -560px;
+    top: -600px;
     text-align: center;
   }
 }

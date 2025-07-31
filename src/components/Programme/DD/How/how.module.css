@@ -1,5 +1,11 @@
 /** @format */
 
+.how2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
 .how {
   padding: 120px 80px 0;
   display: flex;
@@ -50,6 +56,20 @@
   gap: 12px;
 }
 
+.how2 button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--color-orange);
+  font-size: 16px;
+  background-color: transparent;
+  font-weight: 500;
+  color: var(--color-orange);
+  font-family: var(--font-inter);
+  padding: 12px 60px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) {
   .how {
     flex-direction: column;
@@ -62,7 +82,7 @@
     gap: 0;
   }
 
-  .how img {
+  .how > img {
     width: 312px;
   }
 
@@ -90,4 +110,7 @@
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .how {
+    flex-direction: column;
+  }
 }

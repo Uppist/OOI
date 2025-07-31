@@ -25,7 +25,7 @@ export default function Future() {
       </div>
       <button>
         {" "}
-        <Link to='/programme'>
+        <Link to='/programmes'>
           <img src={logo1} alt='' />
           Back
         </Link>
