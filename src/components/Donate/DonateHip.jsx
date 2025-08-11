@@ -57,7 +57,7 @@ export default function DonateHip() {
 
   const data = {
     email: isData.email,
-    amount: isData.amount,
+    amount: Number(isData.amount),
     first_name: isData.firstName,
     phone_number: isData.phone_number,
     last_name: isData.Surname,
